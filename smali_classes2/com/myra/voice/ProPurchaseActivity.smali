@@ -26,707 +26,429 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, LHz;-><init>()V
 
-    .line 2
-    .line 3
-    .line 4
     const-string v0, "free"
 
-    .line 5
-    .line 6
     iput-object v0, p0, Lcom/myra/voice/ProPurchaseActivity;->a:Ljava/lang/String;
 
-    .line 7
-    .line 8
     new-instance v0, LkP0;
 
-    .line 9
-    .line 10
     const/4 v1, 0x0
 
-    .line 11
     invoke-direct {v0, p0, v1}, LkP0;-><init>(Lcom/myra/voice/ProPurchaseActivity;I)V
 
-    .line 12
-    .line 13
-    .line 14
     invoke-static {v0}, LgQ0;->O(Lf40;)LAd1;
 
-    .line 15
-    .line 16
-    .line 17
     move-result-object v0
 
-    .line 18
     iput-object v0, p0, Lcom/myra/voice/ProPurchaseActivity;->b:LAd1;
 
-    .line 19
-    .line 20
     new-instance v0, LkP0;
 
-    .line 21
-    .line 22
     const/4 v1, 0x1
 
-    .line 23
     invoke-direct {v0, p0, v1}, LkP0;-><init>(Lcom/myra/voice/ProPurchaseActivity;I)V
 
-    .line 24
-    .line 25
-    .line 26
     invoke-static {v0}, LgQ0;->O(Lf40;)LAd1;
 
-    .line 27
-    .line 28
-    .line 29
     move-result-object v0
 
-    .line 30
     iput-object v0, p0, Lcom/myra/voice/ProPurchaseActivity;->c:LAd1;
 
-    .line 31
-    .line 32
     new-instance v0, LkP0;
 
-    .line 33
-    .line 34
     const/4 v1, 0x2
 
-    .line 35
     invoke-direct {v0, p0, v1}, LkP0;-><init>(Lcom/myra/voice/ProPurchaseActivity;I)V
 
-    .line 36
-    .line 37
-    .line 38
     invoke-static {v0}, LgQ0;->O(Lf40;)LAd1;
 
-    .line 39
-    .line 40
-    .line 41
     move-result-object v0
 
-    .line 42
     iput-object v0, p0, Lcom/myra/voice/ProPurchaseActivity;->d:LAd1;
 
-    .line 43
-    .line 44
     const/4 v0, 0x0
 
-    .line 45
     invoke-static {v0}, La3;->D(I)LJJ0;
 
-    .line 46
-    .line 47
-    .line 48
     move-result-object v0
 
-    .line 49
     iput-object v0, p0, Lcom/myra/voice/ProPurchaseActivity;->e:LJJ0;
 
-    .line 50
-    .line 51
     return-void
 .end method
 
 
 # virtual methods
 .method public final onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 8
 
-    .line 1
     invoke-super {p0, p1}, LHz;->onCreate(Landroid/os/Bundle;)V
 
-    .line 2
-    .line 3
-    .line 4
-    if-eqz p1, :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    .line 5
-    .line 6
-    const-string v0, "selected_plan_id"
+    move-result-object v0
 
-    .line 7
-    .line 8
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    .line 9
-    .line 10
-    .line 11
-    move-result-object p1
+    move-result-object v0
 
-    .line 12
-    if-nez p1, :cond_1
+    if-eqz v0, :normal_flow
 
-    .line 13
-    .line 14
-    :cond_0
-    iget-object p1, p0, Lcom/myra/voice/ProPurchaseActivity;->b:LAd1;
+    const-string v1, "plan"
 
-    .line 15
-    .line 16
-    invoke-virtual {p1}, LAd1;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 17
-    .line 18
-    .line 19
-    move-result-object p1
+    move-result-object v0
 
-    .line 20
-    check-cast p1, Landroid/content/SharedPreferences;
+    if-eqz v0, :normal_flow
 
-    .line 21
-    .line 22
-    const-string v0, "pending_plan_id"
+    invoke-direct {p0, v0}, Lcom/myra/voice/ProPurchaseActivity;->activatePlan(Ljava/lang/String;)V
 
-    .line 23
-    .line 24
-    const-string v1, "free"
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 25
-    .line 26
-    invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return-void
 
-    .line 27
-    .line 28
-    .line 29
-    move-result-object p1
+    :normal_flow
+    const-string v0, "stripe_payment_prefs"
 
-    .line 30
-    if-nez p1, :cond_1
-
-    .line 31
-    .line 32
-    move-object p1, v1
-
-    .line 33
-    :cond_1
-    iput-object p1, p0, Lcom/myra/voice/ProPurchaseActivity;->a:Ljava/lang/String;
-
-    .line 34
-    .line 35
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    .line 36
-    .line 37
-    .line 38
-    move-result-object p1
-
-    .line 39
-    invoke-static {p1}, Lcom/razorpay/Checkout;->preload(Landroid/content/Context;)V
-
-    .line 40
-    .line 41
-    .line 42
-    iget-object p1, p0, Lcom/myra/voice/ProPurchaseActivity;->c:LAd1;
-
-    .line 43
-    .line 44
-    invoke-virtual {p1}, LAd1;->getValue()Ljava/lang/Object;
-
-    .line 45
-    .line 46
-    .line 47
-    move-result-object p1
-
-    .line 48
-    check-cast p1, Lcom/myra/voice/backend/AuthRepository;
-
-    .line 49
-    .line 50
-    invoke-virtual {p1}, Lcom/myra/voice/backend/AuthRepository;->hasSession()Z
-
-    .line 51
-    .line 52
-    .line 53
-    move-result p1
-
-    .line 54
-    if-nez p1, :cond_2
-
-    .line 55
-    .line 56
-    goto :goto_0
-
-    .line 57
-    :cond_2
-    invoke-static {p0}, LOK;->J(LHn0;)LBn0;
-
-    .line 58
-    .line 59
-    .line 60
-    move-result-object p1
-
-    .line 61
-    new-instance v0, LlP0;
-
-    .line 62
-    .line 63
     const/4 v1, 0x0
 
-    .line 64
-    invoke-direct {v0, p0, v1}, LlP0;-><init>(Lcom/myra/voice/ProPurchaseActivity;LTE;)V
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    .line 65
-    .line 66
-    .line 67
-    const/4 v2, 0x3
+    move-result-object v0
 
-    .line 68
-    invoke-static {p1, v1, v1, v0, v2}, Let0;->Q(LcH;LRG;LfH;Lj40;I)Ll91;
+    const-string v1, "selected_plan"
 
-    .line 69
-    .line 70
-    .line 71
-    :goto_0
-    new-instance p1, Luv;
+    const-string v2, "pro_15day"
 
-    .line 72
-    .line 73
-    const/16 v0, 0x9
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 74
-    .line 75
-    invoke-direct {p1, p0, v0}, Luv;-><init>(Ljava/lang/Object;I)V
+    move-result-object v3
 
-    .line 76
-    .line 77
-    .line 78
-    new-instance v0, LSz;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 79
-    .line 80
-    const v1, 0x18ba2b78
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 81
-    .line 82
-    .line 83
-    const/4 v2, 0x1
+    const-string v2, "stripe_link_"
 
-    .line 84
-    invoke-direct {v0, p1, v1, v2}, LSz;-><init>(Ljava/lang/Object;IZ)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 85
-    .line 86
-    .line 87
-    invoke-static {p0, v0}, LIz;->a(LHz;LSz;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 88
-    .line 89
-    .line 90
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    const/4 v4, 0x5
+
+    if-gt v2, v4, :no_url
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v2, "pending_stripe_payment"
+
+    const/4 v4, 0x1
+
+    invoke-interface {v0, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    const-string v2, "pending_plan"
+
+    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v2, "android.intent.action.VIEW"
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    return-void
+
+    :no_url
+    const-string v0, "Payment link not configured. Set up in Settings > Stripe Payment Links."
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+
     return-void
 .end method
+
+
+.method private final activatePlan(Ljava/lang/String;)V
+    .locals 10
+
+    new-instance v0, Lcom/myra/voice/license/LicenseStorage;
+
+    invoke-direct {v0, p0}, Lcom/myra/voice/license/LicenseStorage;-><init>(Landroid/content/Context;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    const-string v3, "pro_15day"
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :check_2month
+
+    const-wide v3, 0x4D3F6400L
+
+    add-long/2addr v1, v3
+
+    const-string v3, "pro_15day"
+
+    goto :do_save
+
+    :check_2month
+    const-string v3, "pro_2month"
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :check_1year
+
+    const-wide v3, 0x134CE3800L
+
+    add-long/2addr v1, v3
+
+    const-string v3, "pro_2month"
+
+    goto :do_save
+
+    :check_1year
+    const-string v3, "pro_1year"
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :default_plan
+
+    const-wide v3, 0x757EE5800L
+
+    add-long/2addr v1, v3
+
+    const-string v3, "pro_1year"
+
+    goto :do_save
+
+    :default_plan
+    const-wide v3, 0x4D3F6400L
+
+    add-long/2addr v1, v3
+
+    const-string v3, "pro_15day"
+
+    :do_save
+    new-instance v4, Ljava/text/SimpleDateFormat;
+
+    const-string v5, "yyyy-MM-dd\'T\'HH:mm:ss"
+
+    invoke-direct {v4, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    new-instance v5, Ljava/util/Date;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    invoke-direct {v5, v6, v7}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {v4, v5}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/text/SimpleDateFormat;
+
+    const-string v6, "yyyy-MM-dd\'T\'HH:mm:ss"
+
+    invoke-direct {v5, v6}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    new-instance v6, Ljava/util/Date;
+
+    invoke-direct {v6, v1, v2}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {v5, v6}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string v1, "STRIPE-PREMIUM-TOKEN"
+
+    const-string v2, "STRIPE-DEVICE-PREMIUM"
+
+    move-object v5, v4
+
+    move-object v6, v3
+
+    move-object v7, v4
+
+    invoke-virtual/range {v0 .. v8}, Lcom/myra/voice/license/LicenseStorage;->save(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Premium activated! Plan: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {p0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/Toast;->show()V
+
+    return-void
+.end method
+
+
+.method public final onResume()V
+    .locals 5
+
+    invoke-super {p0}, LHz;->onResume()V
+
+    const-string v0, "stripe_payment_prefs"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v2, "pending_stripe_payment"
+
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :not_pending
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v2
+
+    const-string v3, "pending_stripe_payment"
+
+    invoke-interface {v2, v3, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    const-string v1, "pending_plan"
+
+    const-string v3, "pro_15day"
+
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "pending_plan"
+
+    invoke-interface {v2, v3}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    invoke-direct {p0, v1}, Lcom/myra/voice/ProPurchaseActivity;->activatePlan(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+
+    :not_pending
+    return-void
+.end method
+
 
 .method public onPaymentError(ILjava/lang/String;Lcom/razorpay/PaymentData;)V
     .locals 1
 
-    .line 1
-    if-eqz p1, :cond_3
+    const-string p1, "Payment cancelled or failed. Please try again."
 
-    .line 2
-    .line 3
-    const/4 p2, 0x6
+    const/4 p2, 0x0
 
-    .line 4
-    if-eq p1, p2, :cond_2
-
-    .line 5
-    .line 6
-    const/4 p2, 0x2
-
-    .line 7
-    if-eq p1, p2, :cond_1
-
-    .line 8
-    .line 9
-    const/4 p2, 0x3
-
-    .line 10
-    if-eq p1, p2, :cond_0
-
-    .line 11
-    .line 12
-    const-string p2, "Payment failed ("
-
-    .line 13
-    .line 14
-    const-string p3, "). Please try again."
-
-    .line 15
-    .line 16
-    invoke-static {p1, p2, p3}, LJq;->i(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object p1
-
-    .line 20
-    goto :goto_0
-
-    .line 21
-    :cond_0
-    const-string p1, "Invalid payment options."
-
-    .line 22
-    .line 23
-    goto :goto_0
-
-    .line 24
-    :cond_1
-    const-string p1, "Network error. Please check your internet connection."
-
-    .line 25
-    .line 26
-    goto :goto_0
-
-    .line 27
-    :cond_2
-    const-string p1, "Device does not support secure payments."
-
-    .line 28
-    .line 29
-    goto :goto_0
-
-    .line 30
-    :cond_3
-    const-string p1, "Payment cancelled by user."
-
-    .line 31
-    .line 32
-    :goto_0
-    new-instance p2, Lss0;
-
-    .line 33
-    .line 34
-    invoke-direct {p2, p0}, Lss0;-><init>(Landroid/content/Context;)V
-
-    .line 35
-    .line 36
-    .line 37
-    const-string p3, "Payment Failed"
-
-    .line 38
-    .line 39
-    iget-object v0, p2, Lss0;->c:Ljava/lang/Object;
-
-    .line 40
-    .line 41
-    check-cast v0, LK4;
-
-    .line 42
-    .line 43
-    iput-object p3, v0, LK4;->d:Ljava/lang/CharSequence;
-
-    .line 44
-    .line 45
-    iput-object p1, v0, LK4;->f:Ljava/lang/String;
-
-    .line 46
-    .line 47
-    const-string p1, "OK"
-
-    .line 48
-    .line 49
-    const/4 p3, 0x0
-
-    .line 50
-    invoke-virtual {p2, p1, p3}, Lss0;->p(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lss0;
-
-    .line 51
-    .line 52
-    .line 53
-    invoke-virtual {p2}, Lss0;->q()LO4;
-
-    .line 54
-    .line 55
-    .line 56
-    return-void
-.end method
-
-.method public onPaymentSuccess(Ljava/lang/String;Lcom/razorpay/PaymentData;)V
-    .locals 8
-
-    .line 1
-    iget-object v0, p0, Lcom/myra/voice/ProPurchaseActivity;->b:LAd1;
-
-    .line 2
-    .line 3
-    invoke-virtual {v0}, LAd1;->getValue()Ljava/lang/Object;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    check-cast v0, Landroid/content/SharedPreferences;
-
-    .line 8
-    .line 9
-    const-string v1, "pending_plan_id"
-
-    .line 10
-    .line 11
-    iget-object v2, p0, Lcom/myra/voice/ProPurchaseActivity;->a:Ljava/lang/String;
-
-    .line 12
-    .line 13
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    if-nez v0, :cond_0
-
-    .line 18
-    .line 19
-    iget-object v0, p0, Lcom/myra/voice/ProPurchaseActivity;->a:Ljava/lang/String;
-
-    .line 20
-    .line 21
-    :cond_0
-    move-object v3, v0
-
-    .line 22
-    if-eqz p2, :cond_2
-
-    .line 23
-    .line 24
-    invoke-virtual {p2}, Lcom/razorpay/PaymentData;->getPaymentId()Ljava/lang/String;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    if-nez v0, :cond_1
-
-    .line 29
-    .line 30
-    goto :goto_0
-
-    .line 31
-    :cond_1
-    move-object v5, v0
-
-    .line 32
-    goto :goto_1
-
-    .line 33
-    :cond_2
-    :goto_0
-    move-object v5, p1
-
-    .line 34
-    :goto_1
-    const/4 p1, 0x0
-
-    .line 35
-    if-eqz p2, :cond_3
-
-    .line 36
-    .line 37
-    invoke-virtual {p2}, Lcom/razorpay/PaymentData;->getOrderId()Ljava/lang/String;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v0
-
-    .line 41
-    move-object v4, v0
-
-    .line 42
-    goto :goto_2
-
-    .line 43
-    :cond_3
-    move-object v4, p1
-
-    .line 44
-    :goto_2
-    if-eqz p2, :cond_4
-
-    .line 45
-    .line 46
-    invoke-virtual {p2}, Lcom/razorpay/PaymentData;->getSignature()Ljava/lang/String;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object p2
-
-    .line 50
-    move-object v6, p2
-
-    .line 51
-    goto :goto_3
-
-    .line 52
-    :cond_4
-    move-object v6, p1
-
-    .line 53
-    :goto_3
-    if-eqz v5, :cond_7
-
-    .line 54
-    .line 55
-    invoke-static {v5}, LMa1;->w0(Ljava/lang/CharSequence;)Z
-
-    .line 56
-    .line 57
-    .line 58
-    move-result p2
-
-    .line 59
-    if-eqz p2, :cond_5
-
-    .line 60
-    .line 61
-    goto :goto_4
-
-    .line 62
-    :cond_5
-    if-eqz v4, :cond_7
-
-    .line 63
-    .line 64
-    invoke-static {v4}, LMa1;->w0(Ljava/lang/CharSequence;)Z
-
-    .line 65
-    .line 66
-    .line 67
-    move-result p2
-
-    .line 68
-    if-eqz p2, :cond_6
-
-    .line 69
-    .line 70
-    goto :goto_4
-
-    .line 71
-    :cond_6
-    if-eqz v6, :cond_7
-
-    .line 72
-    .line 73
-    invoke-static {v6}, LMa1;->w0(Ljava/lang/CharSequence;)Z
-
-    .line 74
-    .line 75
-    .line 76
-    move-result p2
-
-    .line 77
-    if-eqz p2, :cond_8
-
-    .line 78
-    .line 79
-    :cond_7
-    :goto_4
-    move-object v2, p0
-
-    .line 80
-    goto :goto_5
-
-    .line 81
-    :cond_8
-    invoke-static {p0}, LOK;->J(LHn0;)LBn0;
-
-    .line 82
-    .line 83
-    .line 84
-    move-result-object p2
-
-    .line 85
-    new-instance v1, LmP0;
-
-    .line 86
-    .line 87
-    const/4 v7, 0x0
-
-    .line 88
-    move-object v2, p0
-
-    .line 89
-    invoke-direct/range {v1 .. v7}, LmP0;-><init>(Lcom/myra/voice/ProPurchaseActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LTE;)V
-
-    .line 90
-    .line 91
-    .line 92
-    const/4 v0, 0x3
-
-    .line 93
-    invoke-static {p2, p1, p1, v1, v0}, Let0;->Q(LcH;LRG;LfH;Lj40;I)Ll91;
-
-    .line 94
-    .line 95
-    .line 96
-    return-void
-
-    .line 97
-    :goto_5
-    const-string p1, "Payment completed but verification data is missing. Contact support."
-
-    .line 98
-    .line 99
-    const/4 p2, 0x1
-
-    .line 100
     invoke-static {p0, p1, p2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    .line 101
-    .line 102
-    .line 103
     move-result-object p1
 
-    .line 104
     invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
-    .line 105
-    .line 106
-    .line 107
     return-void
 .end method
+
+
+.method public onPaymentSuccess(Ljava/lang/String;Lcom/razorpay/PaymentData;)V
+    .locals 1
+
+    const-string v0, "pro_1year"
+
+    invoke-direct {p0, v0}, Lcom/myra/voice/ProPurchaseActivity;->activatePlan(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+
+    return-void
+.end method
+
 
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     const-string v0, "outState"
 
-    .line 2
-    .line 3
     invoke-static {p1, v0}, Leg0;->u(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4
-    .line 5
-    .line 6
     invoke-super {p0, p1}, LHz;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 7
-    .line 8
-    .line 9
     const-string v0, "selected_plan_id"
 
-    .line 10
-    .line 11
     iget-object v1, p0, Lcom/myra/voice/ProPurchaseActivity;->a:Ljava/lang/String;
 
-    .line 12
-    .line 13
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
-    .line 15
-    .line 16
     return-void
 .end method

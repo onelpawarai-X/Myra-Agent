@@ -37,35 +37,74 @@
 
 # virtual methods
 .method public final isFeatureUnlocked(Landroid/content/Context;Lcom/myra/voice/license/PremiumFeature;)Z
-    .locals 1
+    .locals 5
 
-    .line 1
     const-string v0, "context"
-
-    .line 2
-    .line 3
     invoke-static {p1, v0}, Leg0;->u(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4
-    .line 5
-    .line 6
     const-string v0, "feature"
-
-    .line 7
-    .line 8
     invoke-static {p2, v0}, Leg0;->u(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 9
-    .line 10
-    .line 11
     invoke-virtual {p0, p1}, Lcom/myra/voice/license/LicenseManager;->isPremium(Landroid/content/Context;)Z
+    move-result v0
 
-    .line 12
-    .line 13
-    .line 14
-    move-result p1
+    if-eqz v0, :return_false
 
-    .line 15
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    move-result-object p1
+
+    const-string v0, "myra_secure_license"
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    move-result-object v0
+
+    const-string v1, "plan"
+    const-string v2, "Free"
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+
+    invoke-virtual {p2}, Lcom/myra/voice/license/PremiumFeature;->ordinal()I
+    move-result v1
+
+    const-string v2, "pro_1year"
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v2
+    if-nez v2, :check_pro_2month
+
+    const/4 p1, 0x1
+    return p1
+
+    :check_pro_2month
+    const-string v2, "pro_2month"
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v2
+    if-nez v2, :check_pro_15day
+
+    const/4 p1, 0x4
+    if-ne v1, p1, :return_true
+
+    const/4 p1, 0x1
+    return p1
+
+    :check_pro_15day
+    const-string v2, "pro_15day"
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v2
+    if-eqz v2, :return_false
+
+    if-eqz v1, :return_true
+
+    const/4 p1, 0x3
+    if-ne v1, p1, :return_false
+
+    :return_true
+    const/4 p1, 0x1
+    return p1
+
+    :return_false
+    const/4 p1, 0x0
     return p1
 .end method
 

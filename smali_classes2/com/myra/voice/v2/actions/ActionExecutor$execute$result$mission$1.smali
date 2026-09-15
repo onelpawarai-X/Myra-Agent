@@ -315,7 +315,7 @@
 
     .line 52
     .line 53
-    const-string v6, "openrouter"
+    const-string v6, "opencode"
 
     .line 54
     .line 55

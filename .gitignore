@@ -1,7 +1,10 @@
-﻿# Ignore large/unnecessary files
-original/
-unknown/
+﻿build/
 *.apk
 *.keystore
 *.jks
 local.properties
+.gradle/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db

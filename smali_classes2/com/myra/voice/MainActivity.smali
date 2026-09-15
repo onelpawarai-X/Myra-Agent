@@ -577,6 +577,7 @@
     .line 13
     .line 14
     move-result v2
+    const/4 v2, 0x1
 
     .line 15
     new-instance v3, Lcom/myra/voice/backend/AuthRepository;
@@ -594,6 +595,7 @@
     .line 22
     .line 23
     move-result v3
+    const/4 v3, 0x1
 
     .line 24
     const-string v4, "onboarding_prefs"
@@ -2032,6 +2034,7 @@
     .line 11
     .line 12
     move-result v0
+    const/4 v0, 0x1
 
     .line 13
     const-string v1, "user_profile_prefs"
@@ -2145,7 +2148,7 @@
     .line 64
     :cond_2
     :goto_0
-    if-eqz v2, :cond_4
+    goto :cond_3
 
     .line 65
     .line 66

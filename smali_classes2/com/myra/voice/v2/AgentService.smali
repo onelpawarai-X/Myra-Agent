@@ -3922,7 +3922,7 @@
 
     .line 158
     .line 159
-    const-string v3, "openrouter"
+    const-string v3, "opencode"
 
     .line 160
     .line 161

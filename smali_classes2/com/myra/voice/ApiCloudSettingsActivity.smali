@@ -380,7 +380,7 @@
 
     .line 176
     .line 177
-    const-string v2, "openrouter"
+    const-string v2, "opencode"
 
     .line 178
     .line 179

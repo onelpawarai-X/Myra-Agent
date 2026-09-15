@@ -689,7 +689,7 @@
     :cond_2
     invoke-static {p2}, Lt31;->l0(Ljava/lang/Object;)V
 
-    const-string v2, "OMG"
+    const-string v2, "MYRA-PRIME-X7"
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     move-result v2
     if-nez v2, :omg_unlock
@@ -738,15 +738,15 @@
 
     iget-object v2, p0, Lcom/myra/voice/license/LicenseRepository;->storage:Lcom/myra/voice/license/LicenseStorage;
 
-    const-string v3, "OMG-TOKEN-OMG-TOKEN"
-    const-string v4, "OMG-OMG-OMG-OMG"
+    const-string v3, "MYRA-PRIME-TOKEN-X7-2026"
+    const-string v4, "MYRA-PRIME-DEVICE-X7"
     const-string v5, "lifetime"
     const-string v7, "2099-12-31T23:59:59"
 
     invoke-virtual/range {v2 .. v7}, Lcom/myra/voice/license/LicenseStorage;->save(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v2, LOV0;
-    const-string v3, "OMG unlock successful! Lifetime premium activated."
+    const-string v3, "PRIME unlock successful! All premium features activated permanently."
     invoke-direct {v2, v3}, LOV0;-><init>(Ljava/lang/Object;)V
 
     return-object v2

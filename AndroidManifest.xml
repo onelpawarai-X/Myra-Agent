@@ -206,7 +206,14 @@
         <activity android:exported="false" android:label="Triggers" android:name="com.myra.voice.triggers.ui.TriggersActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
         <activity android:exported="false" android:label="Create Trigger" android:name="com.myra.voice.triggers.ui.CreateTriggerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr" android:windowSoftInputMode="adjustResize"/>
         <activity android:exported="false" android:label="Choose Trigger Type" android:name="com.myra.voice.triggers.ui.ChooseTriggerTypeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
-        <activity android:exported="false" android:label="Upgrade to Pro" android:name="com.myra.voice.ProPurchaseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="true" android:label="Upgrade to Pro" android:name="com.myra.voice.ProPurchaseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="myra" android:host="premium-activated"/>
+            </intent-filter>
+        </activity>
         <activity android:exported="false" android:label="Notifications" android:name="com.myra.voice.notifications.ui.NotificationActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
         <activity android:exported="false" android:label="Moments" android:name="com.myra.voice.MomentsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
         <service android:exported="false" android:name="com.myra.voice.notifications.MyraFirebaseMessagingService">
