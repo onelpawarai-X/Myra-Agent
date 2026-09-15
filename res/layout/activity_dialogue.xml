@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_solid" android:padding="24.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="#888888" android:id="@id/progressText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:text="1 of 3" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <Button android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/cancelButton" android:background="@drawable/rounded_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/cancel" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/questionText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dp" android:text="What is the name of your brother saved in the phone?" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="16.0sp" android:textColor="#cecece" android:textColorHint="#888888" android:id="@id/answerInput" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp" android:hint="@string/type_answer_here" android:inputType="text" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="#888888" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="@string/or_use_voice_input" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageButton android:id="@id/voiceInputButton" android:background="@drawable/voice_input_button_bg" android:padding="12.0dp" android:layout_width="60.0dp" android:layout_height="60.0dp" android:src="@drawable/ic_mic" android:scaleType="centerInside" android:contentDescription="@string/hold_to_speak" android:layout_marginEnd="12.0dp" />
+                    <TextView android:textSize="12.0sp" android:textColor="#888888" android:id="@id/voiceStatusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hold_to_speak" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/submitButton" android:background="@drawable/rounded_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:text="@string/submit_answer" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

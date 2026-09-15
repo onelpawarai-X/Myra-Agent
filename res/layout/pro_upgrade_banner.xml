@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/pro_banner" android:background="@color/panel_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="56.0dp" android:layout_marginTop="8.0dp" android:layout_marginBottom="8.0dp" android:paddingStart="16.0dp" android:paddingEnd="16.0dp" android:layout_marginStart="16.0dp" android:layout_marginEnd="16.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="#ffffff" android:id="@id/banner_text" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Get more with MYRA Pro" android:layout_weight="1.0" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/panel_background" android:id="@id/upgrade_button" android:background="@drawable/rounded_button" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upgrade" android:paddingStart="16.0dp" android:paddingEnd="16.0dp" />
+</LinearLayout>

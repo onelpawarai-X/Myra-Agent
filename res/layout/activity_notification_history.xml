@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/backButton" style="@style/SubPageBackArrow" />
+        <TextView android:layout_width="0.0dp" android:text="Notifications" android:layout_weight="1.0" style="@style/SubPageTitle" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ef4444" android:id="@id/buttonClearAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear All" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/emptyState" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:layout_width="120.0dp" android:layout_height="120.0dp" android:src="@drawable/panda_logo_v1_512" android:alpha="0.3" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="No notifications yet" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerNotifications" android:padding="20.0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/header" />
+</RelativeLayout>

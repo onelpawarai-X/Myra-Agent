@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="com.myra.voice" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="false"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:mimeType="*/*" android:scheme="*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:host="pay" android:mimeType="*/*" android:scheme="upi"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="rzp.device_token.share"/>
+        </intent>
+        <package android:name="com.google.android.apps.maps"/>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="upi"/>
+        </intent>
+    </queries>
+    <uses-feature android:glEsVersion="0x30000" android:required="true"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <permission android:name="com.myra.voice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.myra.voice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:dataExtractionRules="@xml/data_extraction_rules" android:extractNativeLibs="true" android:fullBackupContent="@xml/backup_rules" android:icon="@drawable/panda_logo_v1_512" android:label="@string/app_name" android:name="com.myra.voice.MyApplication" android:networkSecurityConfig="@xml/network_security_config" android:preserveLegacyExternalStorage="true" android:requestLegacyExternalStorage="true" android:roundIcon="@drawable/panda_logo_v1_512" android:supportsRtl="true" android:theme="@style/Theme.Blurr" android:usesCleartextTraffic="true">
+        <provider android:authorities="com.myra.voice.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.myra.voice.utilities.PermissionRequestActivity" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:label="World Model Debug Brain" android:name="com.myra.voice.ai.worldmodel.ui.WorldModelDebugActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Notification Intelligence Settings" android:name="com.myra.voice.ai.notification.NotificationSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Mission Dashboard" android:name="com.myra.voice.mission.MissionDashboardActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="MYRA Personal AI Map" android:name="com.myra.voice.ai.maps.MyraMapActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="MYRA Maps Settings" android:name="com.myra.voice.ai.maps.MapSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.myra.voice.SplashActivity" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr.Splash">
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@drawable/myra_icon6" android:label="@string/app_name" android:name="com.myra.voice.LauncherIcon6" android:targetActivity="com.myra.voice.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@drawable/myra_icon5" android:label="@string/app_name" android:name="com.myra.voice.LauncherIcon5" android:targetActivity="com.myra.voice.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@drawable/myra_icon4" android:label="@string/app_name" android:name="com.myra.voice.LauncherIcon4" android:targetActivity="com.myra.voice.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@drawable/myra_icon3" android:label="@string/app_name" android:name="com.myra.voice.LauncherIcon3" android:targetActivity="com.myra.voice.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@drawable/myra_icon2" android:label="@string/app_name" android:name="com.myra.voice.LauncherIcon2" android:targetActivity="com.myra.voice.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="true" android:exported="true" android:icon="@drawable/panda_logo_v1_512" android:label="@string/app_name" android:name="com.myra.voice.LauncherDefault" android:targetActivity="com.myra.voice.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.myra.voice.MainActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:label="MYRA Vision" android:launchMode="singleTop" android:name="com.myra.voice.vision.CameraVisionActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.myra.voice.storage.CameraCaptureActivity" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.myra.voice.storage.MediaDeleteRequestActivity" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="true" android:label="Login_activity" android:launchMode="singleTask" android:name="com.myra.voice.LoginActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="auth" android:scheme="myra"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="Connectors" android:name="com.myra.voice.connectors.ui.ConnectorsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="true" android:label="Connector Authorization" android:launchMode="singleTask" android:name="com.myra.voice.connectors.ui.OAuthCallbackActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="oauth" android:scheme="myra"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.myra.voice.ChatActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.myra.voice.UsernameSetupActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.myra.voice.chat.ConversationsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.myra.voice.chat.UserChatActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.myra.voice.chat.UserSearchActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.myra.voice.chat.AllUsersActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.myra.voice.chat.GroupInfoActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.myra.voice.DialogueActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/settings" android:name="com.myra.voice.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="License &amp; Subscription" android:name="com.myra.voice.license.LicenseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Voice &amp; AI Models" android:name="com.myra.voice.VoiceAiModelsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Orb Customization" android:name="com.myra.voice.OrbCustomizationActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Voice Settings" android:name="com.myra.voice.VoiceSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="API &amp; Cloud Settings" android:name="com.myra.voice.ApiCloudSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Deep Research Settings" android:name="com.myra.voice.settings.TavilySettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Wake Word" android:name="com.myra.voice.WakeWordSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="PC Connect" android:name="com.myra.voice.PcConnectActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Subscription" android:name="com.myra.voice.SubscriptionActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="User Profile" android:name="com.myra.voice.UserProfileActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Batch / Update" android:name="com.myra.voice.BatchUpdateActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Account" android:name="com.myra.voice.AccountActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="onboarding" android:name="com.myra.voice.OnboardingPermissionsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="@string/permissions_explained_title" android:name="com.myra.voice.PermissionsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="My Memories" android:name="com.myra.voice.MemoriesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="How MYRA Remembers" android:name="com.myra.voice.PrivacyActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Terms &amp; Conditions" android:name="com.myra.voice.TermsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTop" android:name="com.myra.voice.RoleRequestActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="Send to MYRA" android:launchMode="singleTop" android:name="com.myra.voice.capture.CaptureActivity" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTop" android:name="com.myra.voice.AssistEntryActivity" android:screenOrientation="portrait" android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.ASSIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="Triggers" android:name="com.myra.voice.triggers.ui.TriggersActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Create Trigger" android:name="com.myra.voice.triggers.ui.CreateTriggerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="Choose Trigger Type" android:name="com.myra.voice.triggers.ui.ChooseTriggerTypeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Upgrade to Pro" android:name="com.myra.voice.ProPurchaseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Notifications" android:name="com.myra.voice.notifications.ui.NotificationActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Moments" android:name="com.myra.voice.MomentsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <service android:exported="false" android:name="com.myra.voice.notifications.MyraFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="myra_push_notifications"/>
+        <service android:exported="false" android:label="@string/accessibility_service_label" android:name="com.myra.voice.ScreenInteractionService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibility_service_config"/>
+        </service>
+        <service android:exported="false" android:foregroundServiceType="specialUse" android:label="MYRA Agent Service" android:name="com.myra.voice.v2.AgentService"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="specialUse" android:label="MYRA Trigger Service" android:name="com.myra.voice.triggers.TriggerMonitoringService"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="mediaPlayback" android:label="MYRA Spoken Trigger" android:name="com.myra.voice.triggers.TriggerSpeechService"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="microphone" android:name="com.myra.voice.services.EnhancedWakeWordService"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="camera|microphone" android:label="MYRA" android:name="com.myra.voice.ConversationalAgentService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.myra.voice.services.FloatingPandaButtonService"/>
+        <service android:exported="true" android:label="MYRA Notification Listener" android:name="com.myra.voice.triggers.PandaNotificationListenerService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:label="MYRA" android:name="com.myra.voice.PandaVoiceInteractionService" android:permission="android.permission.BIND_VOICE_INTERACTION">
+            <meta-data android:name="android.voice_interaction" android:resource="@xml/voice_interaction_service"/>
+            <intent-filter>
+                <action android:name="android.service.voice.VoiceInteractionService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.myra.voice.PandaVoiceInteractionSessionService" android:permission="android.permission.BIND_VOICE_INTERACTION"/>
+        <service android:exported="true" android:name="com.myra.voice.PandaRecognitionService" android:permission="android.permission.BIND_RECOGNITION_SERVICE">
+            <intent-filter>
+                <action android:name="android.speech.RecognitionService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="specialUse" android:name="com.myra.voice.callassistant.CallAnnouncementService"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="specialUse" android:name="com.myra.voice.gaming.GameVisionService"/>
+        <receiver android:exported="false" android:name="com.myra.voice.PandaWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/panda_widget_info"/>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="com.myra.voice.triggers.TriggerReceiver">
+            <intent-filter>
+                <action android:name="com.myra.voice.action.EXECUTE_TASK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="com.myra.voice.triggers.ChargingStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.myra.voice.triggers.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.myra.voice.utilities.MyraDeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/device_admin"/>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
+        <activity android:exported="false" android:label="Voice Authentication Settings" android:name="com.myra.voice.authentication.VoiceAuthSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Voice Enrollment" android:name="com.myra.voice.authentication.VoiceEnrollmentActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:name="com.myra.voice.TaskLogsListActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.myra.voice.TaskLogDetailsActivity" android:screenOrientation="portrait"/>
+        <service android:enabled="false" android:exported="false" android:name="androidx.camera.core.impl.MetadataHolderService">
+            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.objects.defaults.internal.DefaultObjectsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.vkp.VkpRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="com.myra.voice.mlkitinitprovider" android:exported="false" android:initOrder="99" android:name="com.google.mlkit.common.internal.MlKitInitProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.razorpay.CheckoutActivity" android:theme="@style/CheckoutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.myra.voice.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="com.razorpay.RazorpayInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="com.razorpay.CoreInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="okhttp3.internal.platform.PlatformInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:exported="false" android:name="com.razorpay.MagicXActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="genericidp"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="recaptcha"/>
+            </intent-filter>
+        </activity>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.functions.FirebaseFunctionsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder">
+            <meta-data android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY" android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl"/>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:enabled="true" android:exported="false" android:fitsSystemWindows="true" android:name="androidx.credentials.playservices.HiddenActivity" android:theme="@style/Theme.Hidden"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="7.0.0"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED" android:value="true"/>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.myra.voice.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="android.ext.adservices" android:required="false"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <activity android:exported="true" android:name="com.razorpay.DeeplinkActivity" android:theme="@style/CheckoutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="com.myra.voice" android:scheme="razorpay"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="false" android:name="com.razorpay.UpiChooserSelectionReceiver"/>
+        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+    </application>
+</manifest>

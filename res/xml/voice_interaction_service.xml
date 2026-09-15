@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<voice-interaction-service android:sessionService="com.myra.voice.PandaVoiceInteractionSessionService" android:recognitionService="com.myra.voice.PandaRecognitionService" android:supportsAssist="true" android:supportsLocalInteraction="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

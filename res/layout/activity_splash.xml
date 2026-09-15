@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/splashRoot" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <VideoView android:layout_gravity="center" android:id="@id/introVideoView" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:layout_gravity="end|bottom" android:id="@id/skipButton" android:background="@drawable/splash_skip_background" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="24.0dp" android:text="@string/splash_skip" android:alpha="0.0" android:paddingStart="16.0dp" android:paddingEnd="16.0dp" />
+</FrameLayout>

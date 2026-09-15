@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="#1e1e1e" app:cardCornerRadius="16.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <VideoView android:layout_gravity="center" android:id="@id/dialogVideoView" android:layout_width="match_parent" android:layout_height="400.0dp" />
+        <Button android:textColor="@color/black" android:id="@id/closeButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="Close" android:backgroundTint="@color/orange" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

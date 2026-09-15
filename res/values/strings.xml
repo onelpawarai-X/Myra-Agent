@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">delete</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Function+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">space</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="accept">Accept</string>
+    <string name="accessibility_consent_message">"To enable hands-free control, MYRA requires Accessibility permission. This allows the app to:
+
+• "<b>Read the content on your screen</b>" to understand context.
+
+• "<b>Perform actions for you</b>" like tapping, scrolling, and navigating.
+
+MYRA is designed to assist, especially visually impaired users, by enabling full voice control of the device.
+
+Do you want to proceed to Settings to enable this?"</string>
+    <string name="accessibility_consent_message_v2">"MYRA requires accessibility services to function as your AI assistant.
+
+This enables voice-controlled automation of your device for hands-free operation and improved accessibility.
+
+🔒 All data processing occurs locally on your device for maximum privacy."</string>
+    <string name="accessibility_consent_title">🤖 Accessibility Services Required</string>
+    <string name="accessibility_permission_desc">🤖 Enable MYRA AI to control your phone through voice commands. This permission allows reading screen content and performing actions for hands-free device automation and improved accessibility.</string>
+    <string name="accessibility_permission_details"> <b>🤖 Why MYRA Needs Accessibility Services:</b>"
+
+    MYRA is an AI assistant that helps you control your phone through voice commands. To do this, it requires accessibility permissions to understand and interact with your device.
+
+
+    "<b>📱 What This Permission Allows:</b>"
+
+    "<b>• Read Screen Content:</b>" MYRA can see and analyze what's currently displayed on your screen to understand the context and provide relevant assistance.
+
+
+    "<b>• Perform Actions:</b>" Execute touch gestures, taps, swipes, and navigation (Back, Home, Recent Apps) on your behalf based on your voice commands.
+
+
+    "<b>• App Interaction:</b>" Open apps, fill forms, scroll through content, and navigate between different screens as requested.
+
+
+    "<b>🔒 Privacy &amp; Data Protection:</b>"
+
+    • All processing happens on Gemini API
+
+    • No personal data is collected or but it is sent to Google Gemini
+
+    • Screen content is only accessed when you actively use MYRA, otherwise MYRA doesnt access screen content
+
+    • We implement safeguards to protect sensitive information, but MYRA can still make mistake
+
+
+    "<b>♿ Accessibility Benefits:</b>"
+
+    This service enables hands-free device control, making smartphones more accessible for users with disabilities, visual impairments, or mobility limitations.
+
+
+    "<b>By proceeding, you understand and consent to MYRA using accessibility services for AI-powered device automation.</b>"
+    "</string>
+    <string name="accessibility_permission_full_desc">"🤖 MYRA is an AI assistant that needs accessibility services to control your phone through voice commands.
+
+This permission allows MYRA to:
+
+• Read screen content to understand context
+• Perform touches, swipes, and navigation
+• Automate tasks across all apps
+
+🔒 Your privacy is Google Privacy Rule for Gemini API - Your app calls Gemini API to understand his next action."</string>
+    <string name="accessibility_permission_needed_for_task">Hey, accessibility permission is needed to execute any task. If you have any concerns about safety or how I work, you can reach out to my developer, Vikash (codeninjavik).</string>
+    <string name="accessibility_permission_title">Accessibility Service</string>
+    <string name="accessibility_service_description">MYRA AI Assistant uses accessibility services to provide voice-controlled device automation. This allows hands-free operation of your phone through AI-powered commands, making technology more accessible. The service reads screen content and performs actions only when actively requested by you.</string>
+    <string name="accessibility_service_label">MYRA Accessibility Service</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_ok">OK</string>
+    <string name="action_sign_out">Sign Out</string>
+    <string name="android.credentials.TYPE_PASSWORD_CREDENTIAL">Password</string>
+    <string name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">Passkey</string>
+    <string name="androidx_startup">androidx.startup</string>
+    <string name="app_list_permission_desc">Allows MYRA to see the apps you have installed. With this, MYRA can open applications for you directly and instantly (e.g., Open YouTube), instead of relying on slower methods of searching the screen. This makes the process much faster and more reliable.</string>
+    <string name="app_list_permission_title">App Management</string>
+    <string name="app_name">MYRA</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="assistant_at_nyour_command">"Assistant at
+Your Command"</string>
+    <string name="at_the_end_of_a_conversation_panda_s_ai_powered_by_google_s_gemini_model_analyzes_the_dialogue_to_identify_lasting_facts_it_s_trained_to_ignore_fleeting_or_unimportant_details_for_example_if_you_say_remind_me_to_call_my_brother_ankit_tomorrow_the_ai_might_create_a_memory_like_the_user_s_brother_is_named_ankit">"At the end of a conversation, MYRA's AI (powered by Google's Gemini model) analyzes the dialogue to identify lasting facts. It's trained to ignore fleeting or unimportant details. For example, if you say, || remind me to call my brother Ankit tomorrow ||,the AI might create a memory like: || The user's brother is named Anita. ||"</string>
+    <string name="back">Back</string>
+    <string name="battery_optimization_message">"If MYRA is not working properly, this might be due to intense battery optimization by your device manufacturer.
+
+Manufacturers like Samsung, Huawei, OnePlus, Xiaomi, and others often add aggressive battery optimizations that can break MYRA's functionality.
+
+To fix this, you need to disable battery optimizations specifically for MYRA in your device settings."</string>
+    <string name="battery_optimization_title">Battery Optimization Issues</string>
+    <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+    <string name="bottomsheet_action_collapse">Collapse the bottom sheet</string>
+    <string name="bottomsheet_action_expand">Expand the bottom sheet</string>
+    <string name="bottomsheet_action_expand_halfway">Expand halfway</string>
+    <string name="bottomsheet_drag_handle_clicked">Drag handle double-tapped</string>
+    <string name="bottomsheet_drag_handle_content_description">Drag handle</string>
+    <string name="call_notification_answer_action">Answer</string>
+    <string name="call_notification_answer_video_action">Video</string>
+    <string name="call_notification_decline_action">Decline</string>
+    <string name="call_notification_hang_up_action">Hang Up</string>
+    <string name="call_notification_incoming_text">Incoming call</string>
+    <string name="call_notification_ongoing_text">Ongoing call</string>
+    <string name="call_notification_screening_text">Screening an incoming call</string>
+    <string name="cancel">Cancel</string>
+    <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
+    <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
+    <string name="character_counter_pattern">%1$d/%2$d</string>
+    <string name="clarification_needed">Clarification needed</string>
+    <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="close_drawer">Close navigation menu</string>
+    <string name="close_sheet">Close sheet</string>
+    <string name="com.google.firebase.crashlytics.mapping_file_id">0bdcb237797d47cf98a24d2ec84935f2</string>
+    <string name="com.google.firebase.crashlytics.version_control_info">"repositories {
+  system: GIT
+  local_root_path: \"$PROJECT_DIR\"
+  revision: \"5acfd751ea88183169a0a6efa104d7e8e72758d9\"
+}
+"</string>
+    <string name="common_google_play_services_enable_button">Enable</string>
+    <string name="common_google_play_services_enable_text">"%1$s won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text">"%1$s won't run without Google Play services, which are missing from your device."</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text">"%1$s won't run without Google Play services, which are not supported by your device."</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">"%1$s won't run unless you update Google Play services."</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text">"%1$s won't run without Google Play services, which are currently updating."</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="connecting">Connecting…</string>
+    <string name="content_filtering">Content Filtering</string>
+    <string name="copy_toast_msg">Link copied to clipboard</string>
+    <string name="decline">Decline</string>
+    <string name="default_account_name">myra_user</string>
+    <string name="default_assistant_permission_title">Default Assistant</string>
+    <string name="default_assistant_role_desc">This lets you activate MYRA by holding the home button or using a voice command, even when the app is closed.</string>
+    <string name="default_assistant_role_title">Set as Default Assistant</string>
+    <string name="default_error_message">Invalid input</string>
+    <string name="default_popup_window_title">Pop-Up Window</string>
+    <string name="dialog_delete_account_message">Are you sure you want to delete your account? This action cannot be undone.</string>
+    <string name="dialog_delete_account_title">Delete Account</string>
+    <string name="dialog_device_limit_title">Device Limit Reached</string>
+    <string name="dialog_sign_out_message">Are you sure you want to sign out?</string>
+    <string name="dialog_sign_out_title">Sign Out</string>
+    <string name="dialogue_cancelled">Dialogue cancelled</string>
+    <string name="dropdown_menu">Dropdown menu</string>
+    <string name="enable_wake_word">Enable Wake Word</string>
+    <string name="error_a11y_label">Error: invalid</string>
+    <string name="error_account_email_invalid">Invalid email address</string>
+    <string name="error_auth_failed">Authentication failed</string>
+    <string name="error_could_not_start_session">Could not start session</string>
+    <string name="error_emergency_contact_invalid">Invalid emergency contact</string>
+    <string name="error_emergency_contact_required">Emergency contact required</string>
+    <string name="error_google_cancelled">Google sign in cancelled</string>
+    <string name="error_google_sign_in_failed">Google sign in failed</string>
+    <string name="error_icon_content_description">Error</string>
+    <string name="error_name_required">Name is required</string>
+    <string name="error_network">Network error</string>
+    <string name="error_no_internet">No internet connection</string>
+    <string name="error_save_failed">Save failed</string>
+    <string name="error_setup_failed">Setup failed</string>
+    <string name="error_sign_in_failed">Sign in failed</string>
+    <string name="error_signed_out">Signed out successfully</string>
+    <string name="error_sync_failed">Sync failed</string>
+    <string name="error_taking_too_long">Taking too long…</string>
+    <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
+    <string name="fab_transformation_scrim_behavior">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+    <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="fallback_menu_item_copy_link">Copy link</string>
+    <string name="fallback_menu_item_open_in_browser">Open in browser</string>
+    <string name="fallback_menu_item_share_link">Share link</string>
+    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="finish_onboarding_button">Finish Onboarding</string>
+    <string name="gcm_defaultSenderId">559790856787</string>
+    <string name="get_started_button">Get Started</string>
+    <string name="get_your_free_accesskey_from_the_picovoice_console"><u>Get your free AccessKey from the Picovoice Console</u></string>
+    <string name="get_your_free_picovoice_api_key_you_can_paste_it_here">Get your free Picovoice API Key, you can paste it here.</string>
+    <string name="google_api_key">AIzaSyA38Luwlgu9NwLL7EaRC_lX7Lyt2KW1nx4</string>
+    <string name="google_app_id">1:559790856787:android:d1da2e3721e868a3c9c4a6</string>
+    <string name="google_crash_reporting_api_key">AIzaSyA38Luwlgu9NwLL7EaRC_lX7Lyt2KW1nx4</string>
+    <string name="google_storage_bucket">myraai-bdb60.firebasestorage.app</string>
+    <string name="grant_accessibility_permission">Grant Accessibility Permission</string>
+    <string name="grant_default_assistant_permission_button">Set as Default Assistant</string>
+    <string name="grant_permission_button">Grant Permission</string>
+    <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="hold_to_speak">Hold to Speak Command</string>
+    <string name="icon_content_description">Dialog Icon</string>
+    <string name="in_progress">In progress</string>
+    <string name="indeterminate">Partially checked</string>
+    <string name="input_box_hint">+ Ask MYRA</string>
+    <string name="input_the_task">Input the Task</string>
+    <string name="item_view_role_description">Tab</string>
+    <string name="label_android_version">Android %s</string>
+    <string name="label_app_version">App Version %s</string>
+    <string name="label_last_login">Last Login: %s</string>
+    <string name="label_no_devices_registered">No devices registered</string>
+    <string name="listening">Listening…</string>
+    <string name="m3_exceed_max_badge_text_suffix">%1$s%2$s</string>
+    <string name="m3_ref_typeface_brand_regular">sans-serif</string>
+    <string name="m3_ref_typeface_plain_medium">sans-serif-medium</string>
+    <string name="m3_ref_typeface_plain_regular">sans-serif</string>
+    <string name="m3c_bottom_sheet_collapse_description">Collapse bottom sheet</string>
+    <string name="m3c_bottom_sheet_dismiss_description">Dismiss bottom sheet</string>
+    <string name="m3c_bottom_sheet_drag_handle_description">Drag handle</string>
+    <string name="m3c_bottom_sheet_expand_description">Expand bottom sheet</string>
+    <string name="m3c_bottom_sheet_pane_title">Bottom Sheet</string>
+    <string name="m3c_dialog">Dialog</string>
+    <string name="maplibre_attributionErrorNoBrowser">"No web browser installed on device, can't open web page."</string>
+    <string name="maplibre_attributionsDialogTitle">MapLibre Maps SDK for Android</string>
+    <string name="maplibre_attributionsIconContentDescription">Attribution icon. Activate to show attribution dialog.</string>
+    <string name="maplibre_compassContentDescription">Map compass. Activate to reset the map rotation to North.</string>
+    <string name="maplibre_mapActionDescription">Showing a Map created with MapLibre. Scroll by dragging two fingers. Zoom by pinching two fingers.</string>
+    <string name="maplibre_myLocationViewContentDescription">Location View. This shows your location on the map.</string>
+    <string name="maplibre_offline_error_region_definition_invalid">"Provided OfflineRegionDefinition doesn't fit the world bounds: %s"</string>
+    <string name="material_clock_display_divider">:</string>
+    <string name="material_clock_toggle_content_description">Select AM or PM</string>
+    <string name="material_motion_easing_accelerated">cubic-bezier(0.4, 0.0, 1.0, 1.0)</string>
+    <string name="material_motion_easing_decelerated">cubic-bezier(0.0, 0.0, 0.2, 1.0)</string>
+    <string name="material_motion_easing_emphasized">path(M 0,0 C 0.05, 0, 0.133333, 0.06, 0.166666, 0.4 C 0.208333, 0.82, 0.25, 1, 1, 1)</string>
+    <string name="material_motion_easing_linear">cubic-bezier(0.0, 0.0, 1.0, 1.0)</string>
+    <string name="material_motion_easing_standard">cubic-bezier(0.4, 0.0, 0.2, 1.0)</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="microphone_permission_desc">The microphone is required for the voice command and wake-word features. It allows you to give instructions to MYRA by speaking.</string>
+    <string name="microphone_permission_not_granted">Microphone permission not granted</string>
+    <string name="microphone_permission_title">Microphone</string>
+    <string name="mtrl_badge_numberless_content_description">New notification</string>
+    <string name="mtrl_checkbox_button_icon_path_checked">M14,18.2 11.4,15.6 10,17 14,21 22,13 20.6,11.6z</string>
+    <string name="mtrl_checkbox_button_icon_path_group_name">icon</string>
+    <string name="mtrl_checkbox_button_icon_path_indeterminate">M13.4,15 11,15 11,17 13.4,17 21,17 21,15z</string>
+    <string name="mtrl_checkbox_button_icon_path_name">icon path</string>
+    <string name="mtrl_checkbox_button_path_checked">M23,7H9C7.9,7,7,7.9,7,9v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V9C25,7.9,24.1,7,23,7z</string>
+    <string name="mtrl_checkbox_button_path_group_name">button</string>
+    <string name="mtrl_checkbox_button_path_name">button path</string>
+    <string name="mtrl_checkbox_button_path_unchecked">M23,7H9C7.9,7,7,7.9,7,9v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V9C25,7.9,24.1,7,23,7z M23,23H9V9h14V23z</string>
+    <string name="mtrl_checkbox_state_description_checked">Checked</string>
+    <string name="mtrl_checkbox_state_description_indeterminate">Partially checked</string>
+    <string name="mtrl_checkbox_state_description_unchecked">Not checked</string>
+    <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description">More than %1$d new notifications</string>
+    <string name="mtrl_exceed_max_badge_number_suffix">%1$d%2$s</string>
+    <string name="mtrl_picker_a11y_next_month">Change to next month</string>
+    <string name="mtrl_picker_a11y_prev_month">Change to previous month</string>
+    <string name="mtrl_picker_cancel">Cancel</string>
+    <string name="mtrl_picker_confirm">OK</string>
+    <string name="mtrl_picker_day_of_week_column_header">%1$s</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">Navigate to current year %1$d</string>
+    <string name="mtrl_picker_navigate_to_year_description">Navigate to year %1$d</string>
+    <string name="mtrl_picker_save">Save</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Switch to calendar input mode</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Tap to switch to Calendar view</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Tap to switch to year view</string>
+    <string name="navigation_menu">Navigation menu</string>
+    <string name="neural_female_description">Natural-sounding female voice with neural technology</string>
+    <string name="neural_female_voice">Neural Female Voice</string>
+    <string name="neural_male_description">Natural-sounding male voice with neural technology</string>
+    <string name="neural_male_voice">Neural Male Voice</string>
+    <string name="no_speech_detected">No speech detected</string>
+    <string name="not_selected">Not selected</string>
+    <string name="notifications_permission_desc">Allow MYRA to send you notifications for important updates or messages.</string>
+    <string name="notifications_permission_title">Notifications</string>
+    <string name="once_a_memory_is_created_e_g_the_user_lives_in_ghaziabad_it_is_stored_in_a_secure_private_database_directly_on_your_phone_this_database_is_part_of_the_MYRA_app_s_internal_storage_and_is_not_accessible_by_other_apps">"Once a memory is created (e.g., The user lives in Ghaziabad.), it is stored in a secure, private database directly on your phone. This database is part of the MYRA app's internal storage and is not accessible by other apps."</string>
+    <string name="or">OR</string>
+    <string name="or_use_voice_input">Or use voice input</string>
+    <string name="overlay_permission_desc">This permission is used to show visual feedback, such as the questions that MYRA have, captions and the voice wave animations, on top of other apps while MYRA is working.</string>
+    <string name="overlay_permission_title">Display Over Other Apps</string>
+    <string name="panda_not_working"><u>MYRA not working on your phone?</u></string>
+    <string name="password_toggle_content_description">Show password</string>
+    <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+    <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="pc_setup_instructions"> <b>Step 1: Run MYRA Companion on your PC</b>"
+ You need Node.js installed (nodejs.org), then run node companion.js from the MYRA Companion folder. It prints your PC's IP address and a 6-digit PIN in the terminal - that PIN is what you enter below, nowhere else generates or checks it.
+
+ "<b>Step 2: Allow it through the Firewall</b>"
+ Windows usually prompts you to allow it the first time - choose Private networks. If you don't see a prompt, open it manually:
+ 1. Press the Windows key and type Windows Defender Firewall with Advanced Security.
+ 2. Click "<b>Inbound Rules</b> (on the left), then <b>New Rule...</b>" (on the right).
+ 3. Select "<b>Port</b>" and click Next.
+ 4. Select "<b>TCP</b> and type <b>8080</b>" in Specific local ports.
+ 5. Select "<b>Allow the connection</b>" and click Next.
+ 6. Keep all boxes checked (Domain, Private, Public) and click Next.
+ 7. Name it MYRA Companion and click Finish.
+
+ "<b>Step 3: Connect</b>"
+ Make sure your PC and phone are on the same Wi-Fi, then enter the IP address and PIN from the Companion's terminal window above and tap Connect. "</string>
+    <string name="permission_not_granted">Permission: Not Granted</string>
+    <string name="permissions_explained_title">Permissions Explained</string>
+    <string name="processing_voice_command">Processing voice command…</string>
+    <string name="project_id">myraai-bdb60</string>
+    <string name="range_end">Range end</string>
+    <string name="range_start">Range start</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="screenshot_mode">Screenshot Mode</string>
+    <string name="screenshot_mode_description">Uses actual screenshots (more accurate, higher resource usage)</string>
+    <string name="search_menu_title">Search</string>
+    <string name="searchbar_scrolling_view_behavior">com.google.android.material.search.SearchBar$ScrollingViewBehavior</string>
+    <string name="searchview_clear_text_content_description">Clear text</string>
+    <string name="searchview_navigation_content_description">Back</string>
+    <string name="select_default_tts_voice">Select your preferred default voice for text-to-speech</string>
+    <string name="select_wake_word_engine">Select Wake Word Engine</string>
+    <string name="selected">Selected</string>
+    <string name="sentence_count_format">Sentence %1$d of %2$d</string>
+    <string name="service_status_stopped">Service Status: Stopped</string>
+    <string name="settings">Settings</string>
+    <string name="settings_saved">Settings saved successfully</string>
+    <string name="shortcut_wake_up_long">Start a new conversation with MYRA</string>
+    <string name="shortcut_wake_up_short">Wake up MYRA</string>
+    <string name="side_sheet_accessibility_pane_title">Side Sheet</string>
+    <string name="side_sheet_behavior">com.google.android.material.sidesheet.SideSheetBehavior</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="speech_error">Speech recognition error</string>
+    <string name="speech_permission_required">Microphone permission required for voice input</string>
+    <string name="splash_skip">Skip</string>
+    <string name="standard_female_description">Clear, professional female voice</string>
+    <string name="standard_female_voice">Standard Female Voice</string>
+    <string name="standard_male_description">Clear, professional male voice</string>
+    <string name="standard_male_voice">Standard Male Voice</string>
+    <string name="starting_agent_task">Starting agent task for: %s</string>
+    <string name="state_empty">Empty</string>
+    <string name="state_off">Off</string>
+    <string name="state_on">On</string>
+    <string name="status_active">Active</string>
+    <string name="status_authenticating">Authenticating…</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="status_checking_subscription">Checking subscription…</string>
+    <string name="status_launching">Launching…</string>
+    <string name="status_loading_voice_engine">Loading voice engine…</string>
+    <string name="status_opening_google">Opening Google…</string>
+    <string name="status_preparing_environment">Preparing environment…</string>
+    <string name="status_profile_saved">Profile saved successfully</string>
+    <string name="status_syncing_profile">Syncing profile…</string>
+    <string name="stt_engine">STT Engine</string>
+    <string name="studio_male_description">High-quality studio male voice</string>
+    <string name="studio_male_voice">Studio Male Voice</string>
+    <string name="submit_answer">Submit Answer</string>
+    <string name="switch_role">Switch</string>
+    <string name="tab">Tab</string>
+    <string name="template_coming_soon">%s is coming soon!</string>
+    <string name="template_percent">%1$d percent.</string>
+    <string name="test_selected_voice">Test Selected Voice</string>
+    <string name="testing_voice">Testing voice…</string>
+    <string name="tooltip_description">tooltip</string>
+    <string name="tooltip_label">show tooltip</string>
+    <string name="triggers_not_working_for_you"><u>Triggers not working for you?</u></string>
+    <string name="tts_voice_settings">TTS Voice Settings</string>
+    <string name="type_answer_here">Type your answer here…</string>
+    <string name="view_source_code_on_github">⭐ See the code on Github</string>
+    <string name="view_task_logs">View Past tasks Logs</string>
+    <string name="vision_mode">Vision Mode:</string>
+    <string name="voice_input">Voice Command</string>
+    <string name="wake_word_disabled">Disable Wake Word</string>
+    <string name="wake_word_enabled">Wake Word enabled with %s</string>
+    <string name="wake_word_engine">Wake Word Engine</string>
+    <string name="wake_word_help_link"><u>Wake word not initializing? Open me!</u></string>
+    <string name="wallet_buy_button_place_holder">Buy with Google</string>
+    <string name="welcome_to_myra_desc">Meet MYRA, your private AI voice assistant. To get started, we need to set up a few essential permissions so MYRA can help you control your phone hands-free.</string>
+    <string name="welcome_to_myra_title">Welcome to MYRA</string>
+    <string name="write_things_you_want_to_avoid">Write Things you want to avoid</string>
+    <string name="xml_mode">XML Mode</string>
+    <string name="xml_mode_description">Uses UI structure data (faster, less resource intensive)</string>
+</resources>

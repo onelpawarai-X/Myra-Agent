@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@drawable/bg_solid" android:padding="16.0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/permissionsTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dp" android:text="@string/permissions_explained_title" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/accessibility_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_accessibility" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/accessibilityStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/accessibilityHeading" android:text="@string/accessibility_permission_title" android:layout_centerVertical="true" android:layout_toStartOf="@id/accessibilityStatus" android:layout_toEndOf="@id/accessibility_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="@string/accessibility_permission_desc" style="@style/PermissionDescription" />
+            <TextView android:layout_marginTop="12.0dp" android:text="@string/accessibility_permission_details" style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantAccessibilityButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/grant_accessibility_permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/assistant_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_mic" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/assistantStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/assistantHeading" android:text="@string/default_assistant_permission_title" android:layout_centerVertical="true" android:layout_toStartOf="@id/assistantStatus" android:layout_toEndOf="@id/assistant_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="@string/default_assistant_role_desc" style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantAssistantButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/grant_default_assistant_permission_button" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/microphone_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_microphone" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/microphoneStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/microphoneHeading" android:text="@string/microphone_permission_title" android:layout_centerVertical="true" android:layout_toStartOf="@id/microphoneStatus" android:layout_toEndOf="@id/microphone_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="@string/microphone_permission_desc" style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantMicrophoneButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Microphone Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/overlay_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_overlay" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/overlayStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/overlayHeading" android:text="@string/overlay_permission_title" android:layout_centerVertical="true" android:layout_toStartOf="@id/overlayStatus" android:layout_toEndOf="@id/overlay_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="@string/overlay_permission_desc" style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantOverlayButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Overlay Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/call_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_accessibility" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/callStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/callHeading" android:text="Calls" android:layout_centerVertical="true" android:layout_toStartOf="@id/callStatus" android:layout_toEndOf="@id/call_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Allow MYRA to place calls and manage phone actions when you ask it to call someone or dial a number." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantCallButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Call Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/notification_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_accessibility" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/notificationStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/notificationHeading" android:text="Notifications" android:layout_centerVertical="true" android:layout_toStartOf="@id/notificationStatus" android:layout_toEndOf="@id/notification_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Let MYRA show you alerts, reminders, and important updates related to your requests." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantNotificationButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Notifications" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/messages_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_microphone" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/messagesStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/messagesHeading" android:text="Messages" android:layout_centerVertical="true" android:layout_toStartOf="@id/messagesStatus" android:layout_toEndOf="@id/messages_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Allow MYRA to read or send messages so it can help you with SMS and messaging requests." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantMessagesButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Messages Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/location_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_overlay" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/locationStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/locationHeading" android:text="Location" android:layout_centerVertical="true" android:layout_toStartOf="@id/locationStatus" android:layout_toEndOf="@id/location_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Allow MYRA to use your location for context-aware requests such as directions or nearby services." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantLocationButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Location Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/contacts_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_accessibility" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/contactsStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/contactsHeading" android:text="Contacts" android:layout_centerVertical="true" android:layout_toStartOf="@id/contactsStatus" android:layout_toEndOf="@id/contacts_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Allow MYRA to look up names and numbers so it can call, message, or announce contacts by name." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantContactsButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Contacts Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/deviceAdmin_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_overlay" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/deviceAdminStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/deviceAdminHeading" android:text="Screen Lock" android:layout_centerVertical="true" android:layout_toStartOf="@id/deviceAdminStatus" android:layout_toEndOf="@id/deviceAdmin_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Allow MYRA to lock your screen when you ask it to." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantDeviceAdminButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Screen Lock Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/appListIcon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_accessibility" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/appListStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/appListHeading" android:text="@string/app_list_permission_title" android:layout_centerVertical="true" android:layout_toStartOf="@id/appListStatus" android:layout_toEndOf="@id/appListIcon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="@string/app_list_permission_desc" style="@style/PermissionDescription" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/camera_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@android:drawable/ic_menu_camera" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/cameraStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/cameraHeading" android:text="Camera Vision" android:layout_centerVertical="true" android:layout_toStartOf="@id/cameraStatus" android:layout_toEndOf="@id/camera_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Required for MYRA to look at objects, scan QR/barcodes, and read documents." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantCameraButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Camera Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/storage_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@android:drawable/ic_menu_save" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/storageStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/storageHeading" android:text="Storage &amp; File Access" android:layout_centerVertical="true" android:layout_toStartOf="@id/storageStatus" android:layout_toEndOf="@id/storage_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Required for MYRA to manage files, clean storage, analyze disk space, search photos, and save photos." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantStorageButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Grant Storage Permission" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/battery_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@android:drawable/ic_lock_idle_low_battery" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/batteryOptimizationStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/batteryOptimizationHeading" android:text="Battery Optimization" android:layout_centerVertical="true" android:layout_toStartOf="@id/batteryOptimizationStatus" android:layout_toEndOf="@id/battery_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="@string/battery_optimization_message" style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantBatteryOptimizationButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Open Battery Settings" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/usage_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@android:drawable/ic_menu_recent_history" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <TextView android:id="@id/usageAccessStatus" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/PermissionStatus" />
+                <TextView android:id="@id/usageAccessHeading" android:text="Usage Access" android:layout_centerVertical="true" android:layout_toStartOf="@id/usageAccessStatus" android:layout_toEndOf="@id/usage_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Lets MYRA see which apps have been most active, so she can tell you what is draining your battery or slowing the phone down." style="@style/PermissionDescription" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/grantUsageAccessButton" android:background="@drawable/rounded_button" android:padding="12.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Open Usage Access Settings" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/gaming_perm_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_accessibility" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/switchGamingPermission" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                <TextView android:text="Gaming Assistant Screen Check" android:layout_centerVertical="true" android:layout_toStartOf="@id/switchGamingPermission" android:layout_toEndOf="@id/gaming_perm_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Allow MYRA to analyze the game screen state to provide real-time strategic advice for Free Fire, BGMI, etc." style="@style/PermissionDescription" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/chatgpt_perm_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_accessibility" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/switchChatGptPermission" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                <TextView android:text="ChatGPT Image Generation" android:layout_centerVertical="true" android:layout_toStartOf="@id/switchChatGptPermission" android:layout_toEndOf="@id/chatgpt_perm_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Allow MYRA to automate the installed ChatGPT app to create and download images and set wallpapers." style="@style/PermissionDescription" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/rounded_background" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/payment_perm_icon" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_accessibility" android:layout_centerVertical="true" android:layout_marginEnd="12.0dp" app:tint="@color/white" />
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/switchPaymentPermission" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                <TextView android:text="Automated Payments Confirmation" android:layout_centerVertical="true" android:layout_toStartOf="@id/switchPaymentPermission" android:layout_toEndOf="@id/payment_perm_icon" style="@style/PermissionHeading" />
+            </RelativeLayout>
+            <TextView android:text="Allow MYRA to perform hands-free banking/UPI payment screen automation with secure user confirmation." style="@style/PermissionDescription" />
+        </LinearLayout>
+        <Button android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/backButtonPermissions" android:background="@drawable/rounded_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:text="@string/back" android:paddingStart="32.0dp" android:paddingEnd="32.0dp" />
+    </LinearLayout>
+</ScrollView>

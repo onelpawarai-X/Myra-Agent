@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/settings_card_background" android:padding="16.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/textTitle" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Notification Title" android:layout_weight="1.0" />
+            <View android:id="@id/badgeNew" android:background="@drawable/circle_magenta" android:layout_width="8.0dp" android:layout_height="8.0dp" android:layout_marginStart="8.0dp" />
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@id/textMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="Message body content goes here..." android:maxLines="2" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:id="@id/textTimestamp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Oct 24, 10:30" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/buttonDelete" android:padding="4.0dp" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@android:drawable/ic_menu_delete" android:contentDescription="Delete" android:layout_marginStart="16.0dp" app:tint="#ef4444"
+      xmlns:app="http://schemas.android.com/apk/res-auto" />
+</LinearLayout>

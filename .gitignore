@@ -1,0 +1,7 @@
+﻿# Ignore large/unnecessary files
+original/
+unknown/
+*.apk
+*.keystore
+*.jks
+local.properties

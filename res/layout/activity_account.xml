@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/background" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/SubPageHeaderRow">
+            <TextView android:id="@id/backButton" style="@style/SubPageBackArrow" />
+            <TextView android:text="Account" style="@style/SubPageTitle" />
+            <View android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_weight="1.0" />
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/text_gray" android:id="@id/textSyncStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="24.0dp" style="@style/SubPageCard">
+            <com.google.android.material.imageview.ShapeableImageView android:layout_width="72.0dp" android:layout_height="72.0dp" android:src="@drawable/ui" android:scaleType="centerCrop" app:shapeAppearanceOverlay="@style/CircleImage"
+              xmlns:app="http://schemas.android.com/apk/res-auto" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dp">
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/textAccountName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="myra_user" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/text_gray" android:id="@id/textAccountEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="user@example.com" />
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/buttonEditProfile" android:background="@drawable/settings_icon_circle_background" android:paddingLeft="16.0dp" android:paddingTop="6.0dp" android:paddingRight="16.0dp" android:paddingBottom="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="✨ Edit Profile" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:orientation="vertical" android:padding="20.0dp" style="@style/SubPageCard">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plan:" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/textPlanValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:layout_marginStart="8.0dp" />
+                <View android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_weight="1.0" />
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#10b981" android:id="@id/textPlanStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Active" />
+            </LinearLayout>
+            <View android:background="@color/white" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="12.0dp" android:layout_marginBottom="12.0dp" android:alpha="0.1" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Credits Used:" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#f59e0b" android:id="@id/textCreditsUsed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_marginStart="8.0dp" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" android:layout_marginStart="4.0dp" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/textCreditsTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_marginStart="4.0dp" />
+            </LinearLayout>
+            <View android:background="@color/white" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="12.0dp" android:layout_marginBottom="12.0dp" android:alpha="0.1" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tasks Remaining:" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#10b981" android:id="@id/textCreditsValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_marginStart="8.0dp" />
+            </LinearLayout>
+            <View android:background="@color/white" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="12.0dp" android:layout_marginBottom="12.0dp" android:alpha="0.1" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Valid Till:" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/textValidTill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_marginStart="8.0dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:orientation="vertical" android:padding="20.0dp" style="@style/SubPageCard">
+            <TextView android:textSize="16.0sp" android:layout_marginBottom="12.0dp" android:text="Account Details" style="@style/SubPageLabel" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Unique Identifier (UID)" style="@style/SubPageLabel" />
+            <TextView android:id="@id/textUid" android:text="--" style="@style/SubPageInput" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Activation ID" style="@style/SubPageLabel" />
+            <TextView android:id="@id/textActivationId" android:text="--" style="@style/SubPageInput" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Created" style="@style/SubPageLabel" />
+                    <TextView android:id="@id/textAccountCreated" android:text="--" style="@style/SubPageInput" />
+                </LinearLayout>
+                <View android:layout_width="12.0dp" android:layout_height="0.0dp" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Last Login" style="@style/SubPageLabel" />
+                    <TextView android:id="@id/textLastLogin" android:text="--" style="@style/SubPageInput" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="20.0dp" style="@style/SubPageCard">
+            <TextView android:textSize="16.0sp" android:layout_marginBottom="12.0dp" android:text="Device &amp; App Info" style="@style/SubPageLabel" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Current Device" style="@style/SubPageLabel" />
+            <TextView android:id="@id/textCurrentDevice" android:text="--" style="@style/SubPageInput" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Android" style="@style/SubPageLabel" />
+                    <TextView android:id="@id/textAndroidVersion" android:text="--" style="@style/SubPageInput" />
+                </LinearLayout>
+                <View android:layout_width="12.0dp" android:layout_height="0.0dp" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="App Version" style="@style/SubPageLabel" />
+                    <TextView android:id="@id/textAppVersion" android:text="--" style="@style/SubPageInput" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Registered Devices" style="@style/SubPageLabel" />
+            <TextView android:id="@id/textRegisteredDevices" android:text="--" android:minLines="1" style="@style/SubPageInput" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Device Limit" style="@style/SubPageLabel" />
+            <TextView android:id="@id/textDeviceLimit" android:text="--" style="@style/SubPageInput" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Automations" style="@style/SubPageLabel" />
+                    <TextView android:id="@id/textAutomationUsed" android:text="0" style="@style/SubPageInput" />
+                </LinearLayout>
+                <View android:layout_width="12.0dp" android:layout_height="0.0dp" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:text="Voice Mins" style="@style/SubPageLabel" />
+                    <TextView android:id="@id/textVoiceMinutes" android:text="0" style="@style/SubPageInput" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:id="@id/rowReferral" style="@style/SettingsMenuRow">
+            <TextView android:text="🎁" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Referral Program" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rowCoupons" style="@style/SettingsMenuRow">
+            <TextView android:text="🏷️" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="My Coupons" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rowInvoices" style="@style/SettingsMenuRow">
+            <TextView android:text="🧾" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Invoices" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rowPurchaseHistory" style="@style/SettingsMenuRow">
+            <TextView android:text="🛍️" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Purchase History" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rowLicenseKey" style="@style/SettingsMenuRow">
+            <TextView android:text="🔑" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="License Key" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rowExportData" style="@style/SettingsMenuRow">
+            <TextView android:text="📤" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Export Data" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rowDeleteAccount" style="@style/SettingsMenuRow">
+            <TextView android:text="🗑️" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="#ef4444" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Delete Account" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:id="@id/rowChangePassword" style="@style/SettingsMenuRow">
+            <TextView android:text="🔐" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Change Password" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rowBackupRestore" style="@style/SettingsMenuRow">
+            <TextView android:text="☁️" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Backup &amp; Restore" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:id="@id/rowPrivacyPolicy" style="@style/SettingsMenuRow">
+            <TextView android:text="🛡️" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Privacy Policy" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rowTerms" style="@style/SettingsMenuRow">
+            <TextView android:text="📋" style="@style/SettingsMenuIcon" />
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Terms &amp; Conditions" android:layout_weight="1.0" android:layout_marginStart="14.0dp" />
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/buttonLogout" android:background="@drawable/settings_card_background" android:padding="14.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ef4444" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logout" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

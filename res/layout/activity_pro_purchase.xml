@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/black" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="24.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dp">
+            <ImageView android:id="@id/back_button" android:background="?selectableItemBackgroundBorderless" android:padding="4.0dp" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/ic_arrow_back" android:layout_centerVertical="true" android:contentDescription="Back" android:layout_alignParentStart="true" app:tint="@color/white" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upgrade to Pro" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:background="@drawable/pro_badge_background" android:paddingLeft="16.0dp" android:paddingTop="8.0dp" android:paddingRight="16.0dp" android:paddingBottom="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dp" android:paddingHorizontal="16.0dp" android:paddingVertical="8.0dp">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✨ PRO" />
+        </LinearLayout>
+        <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp" android:text="Unlock Unlimited Power" />
+        <TextView android:textSize="16.0sp" android:textColor="#cccccc" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dp" android:text="Get unlimited tasks and premium features" />
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:background="@drawable/feature_check_background" android:layout_width="24.0dp" android:layout_height="24.0dp" android:text="✓" android:layout_marginEnd="16.0dp" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Unlimited Daily Tasks" />
+                    <TextView android:textSize="14.0sp" android:textColor="#cccccc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No more daily limits - use MYRA as much as you want" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:background="@drawable/feature_check_background" android:layout_width="24.0dp" android:layout_height="24.0dp" android:text="✓" android:layout_marginEnd="16.0dp" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priority Support" />
+                    <TextView android:textSize="14.0sp" android:textColor="#cccccc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Get faster response times and dedicated support" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dp">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:background="@drawable/feature_check_background" android:layout_width="24.0dp" android:layout_height="24.0dp" android:text="✓" android:layout_marginEnd="16.0dp" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Advanced Features" />
+                    <TextView android:textSize="14.0sp" android:textColor="#cccccc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Access to beta features and premium capabilities" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:background="@drawable/feature_check_background" android:layout_width="24.0dp" android:layout_height="24.0dp" android:text="✓" android:layout_marginEnd="16.0dp" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No Ads" />
+                    <TextView android:textSize="14.0sp" android:textColor="#cccccc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enjoy an uninterrupted, ad-free experience" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/pricing_card_background" android:padding="24.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dp">
+            <TextView android:textSize="14.0sp" android:textColor="#cccccc" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="Special Launch Price" />
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/loading_progress" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:indeterminateTint="@color/white" android:layout_marginVertical="16.0dp" />
+            <TextView android:textSize="32.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/price_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="Loading..." />
+            <TextView android:textSize="12.0sp" android:textColor="#cccccc" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel anytime" />
+        </LinearLayout>
+        <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/black" android:id="@id/purchase_button" android:background="@drawable/purchase_button_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="56.0dp" android:layout_marginBottom="16.0dp" android:text="Start Pro Subscription" />
+        <TextView android:textSize="12.0sp" android:textColor="#999999" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="By subscribing, you agree to our Terms of Service and Privacy Policy. Subscription automatically renews unless cancelled." android:lineSpacingMultiplier="1.2" />
+    </LinearLayout>
+</ScrollView>

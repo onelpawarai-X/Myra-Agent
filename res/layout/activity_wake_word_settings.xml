@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@drawable/bg_solid" android:padding="16.0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/SubPageHeaderRow">
+            <TextView android:id="@id/backButton" style="@style/SubPageBackArrow" />
+            <TextView android:text="Wake Word (Picovoice)" style="@style/SubPageTitle" />
+        </LinearLayout>
+        <LinearLayout style="@style/SubPageCard">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Wake Word" android:layout_weight="1.0" />
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/switchWakeWord" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/SubPageCard">
+            <TextView android:text="Picovoice Access Key" style="@style/SubPageLabel" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="Say &quot;Hey MYRA&quot; to activate the assistant" />
+            <EditText android:id="@id/editWakeWordKey" android:hint="Paste your Picovoice AccessKey" style="@style/SubPageInput" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/gradient_start" android:id="@id/textGetPicovoiceKeyLink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0.0dp" android:text="Get a free key from console.picovoice.ai" />
+        </LinearLayout>
+        <LinearLayout style="@style/SubPageCard">
+            <TextView android:text="Sensitivity" style="@style/SubPageLabel" />
+            <SeekBar android:id="@id/seekBarSensitivity" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:progress="70" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@id/buttonRetrainWakeWord" android:background="@drawable/rounded_button" android:padding="14.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dp" android:text="Re-train Wake Word" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="myra_auth_secure.xml" />
+        <exclude domain="database" path="myra_ai_notification_db" />
+        <exclude domain="database" path="myra_ai_notification_db-wal" />
+        <exclude domain="database" path="myra_ai_notification_db-shm" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="myra_auth_secure.xml" />
+        <exclude domain="database" path="myra_ai_notification_db" />
+        <exclude domain="database" path="myra_ai_notification_db-wal" />
+        <exclude domain="database" path="myra_ai_notification_db-shm" />
+    </device-transfer>
+</data-extraction-rules>

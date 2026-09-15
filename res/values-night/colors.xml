@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#03dac5</color>
+    <color name="background">#161616</color>
+    <color name="background_color">#161616</color>
+    <color name="button_blue">#ff3663ff</color>
+    <color name="dark_background">#161616</color>
+    <color name="gradient_end">#ffa182ff</color>
+    <color name="gradient_start">#ffc882ff</color>
+    <color name="input_box_background">#161616</color>
+    <color name="panel_background">#161616</color>
+    <color name="primary">#161616</color>
+    <color name="surface">#161616</color>
+    <color name="text_primary">#ffffff</color>
+    <color name="text_secondary">#cccccc</color>
+    <color name="wave_color">#00bcd4</color>
+</resources>

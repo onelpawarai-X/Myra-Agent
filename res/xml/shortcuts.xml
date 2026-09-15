@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/ic_mic" android:enabled="true" android:shortcutId="wake_up_myra" android:shortcutShortLabel="@string/shortcut_wake_up_short" android:shortcutLongLabel="@string/shortcut_wake_up_long">
+        <intent android:targetPackage="com.myra.voice" android:action="com.myra.voice.WAKE_UP_MYRA" android:targetClass="com.myra.voice.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

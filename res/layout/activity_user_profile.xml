@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#0a0a0f" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:padding="24.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/backButton" android:background="@drawable/bg_icon_glow" android:layout_width="40.0dp" android:layout_height="40.0dp" android:src="@drawable/ic_back_arrow" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="#ff2d2d" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff2d2d" android:id="@id/pageTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AI IDENTITY" android:letterSpacing="0.1" app:layout_constraintBottom_toBottomOf="@id/backButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/backButton" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#8888aa" android:id="@id/textSyncStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/pageTitle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/pageTitle" />
+        <View android:id="@id/avatarGlow" android:background="@drawable/bg_circle_glow" android:layout_width="100.0dp" android:layout_height="100.0dp" android:layout_marginTop="32.0dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/pageTitle" />
+        <ImageView android:id="@id/profileImage" android:layout_width="80.0dp" android:layout_height="80.0dp" android:src="@drawable/ic_user_placeholder" app:layout_constraintBottom_toBottomOf="@id/avatarGlow" app:layout_constraintEnd_toEndOf="@id/avatarGlow" app:layout_constraintStart_toStartOf="@id/avatarGlow" app:layout_constraintTop_toTopOf="@id/avatarGlow" app:tint="#ffffff" />
+        <LinearLayout android:orientation="vertical" android:id="@id/mainCard" android:background="@drawable/bg_glass_card" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" app:layout_constraintTop_toBottomOf="@id/avatarGlow">
+            <TextView android:text="MASTER NAME" style="@style/FuturisticLabel" />
+            <EditText android:id="@id/editUserName" android:hint="Identify yourself..." android:drawableStart="@drawable/ic_person" style="@style/FuturisticInput" />
+            <TextView android:layout_marginTop="20.0dp" android:text="CHAT ID" style="@style/FuturisticLabel" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/textChatHandle" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="Not set" android:layout_weight="1.0" />
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ff2d2d" android:id="@id/buttonChangeHandle" android:background="?selectableItemBackground" android:padding="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CHANGE" />
+            </LinearLayout>
+            <TextView android:layout_marginTop="20.0dp" android:text="COMMUNICATION LINK" style="@style/FuturisticLabel" />
+            <EditText android:id="@id/editUserEmail" android:hint="Email address..." android:drawableStart="@drawable/ic_email" style="@style/FuturisticInput" />
+            <TextView android:layout_marginTop="20.0dp" android:text="SOS OVERRIDE" style="@style/FuturisticLabel" />
+            <EditText android:id="@id/editEmergencyContact" android:hint="Emergency contact..." android:drawableStart="@drawable/ic_emergency" style="@style/FuturisticInput" />
+            <View android:background="#1affffff" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="24.0dp" />
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ENABLE SOS PROTOCOL" />
+                <androidx.appcompat.widget.SwitchCompat android:id="@id/switchEmergencyContact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" app:thumbTint="#ff2d2d" app:trackTint="#1aff2d2d" />
+            </RelativeLayout>
+            <TextView android:textSize="11.0sp" android:textColor="#8888aa" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Myra will broadcast your GPS coordinates to this contact during emergencies." />
+            <View android:background="#1affffff" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="24.0dp" />
+            <TextView android:layout_marginTop="20.0dp" android:text="SUBSCRIPTION STATUS" style="@style/FuturisticLabel" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/textSubscriptionStatus" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Loading..." />
+            <TextView android:layout_marginTop="20.0dp" android:text="CURRENT PLAN" style="@style/FuturisticLabel" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff2d2d" android:id="@id/textPlanName" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Loading..." />
+            <TextView android:layout_marginTop="20.0dp" android:text="CREDITS USED" style="@style/FuturisticLabel" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#f59e0b" android:id="@id/textCreditsUsed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#8888aa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  /  " />
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/textCreditsTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+            </LinearLayout>
+            <TextView android:layout_marginTop="20.0dp" android:text="CREDITS REMAINING" style="@style/FuturisticLabel" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#10b981" android:id="@id/textCreditsRemaining" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Loading..." />
+            <TextView android:layout_marginTop="20.0dp" android:text="VALID TILL" style="@style/FuturisticLabel" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/textValidTill" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Loading..." />
+            <View android:background="#1affffff" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="24.0dp" />
+            <TextView android:layout_marginTop="20.0dp" android:text="DEVICE &amp; SESSION" style="@style/FuturisticLabel" />
+            <TextView android:textSize="12.0sp" android:textColor="#8888aa" android:id="@id/textUid" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="--" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffff" android:id="@id/textRegisteredDevice" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="--" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="#8888aa" android:id="@id/textAndroidVersion" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="--" android:layout_weight="1.0" />
+                <View android:layout_width="8.0dp" android:layout_height="0.0dp" />
+                <TextView android:textSize="12.0sp" android:textColor="#8888aa" android:id="@id/textLastLogin" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="--" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="#1affffff" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="24.0dp" />
+            <TextView android:layout_marginTop="20.0dp" android:text="REFER &amp; EARN" style="@style/FuturisticLabel" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_edit_text" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/textReferralCode" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="--" android:layout_weight="1.0" android:letterSpacing="0.1" />
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ff2d2d" android:id="@id/buttonShareReferral" android:background="?selectableItemBackground" android:padding="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SHARE" />
+            </LinearLayout>
+            <TextView android:textSize="11.0sp" android:textColor="#8888aa" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Share your code - get 1 credit the moment someone new subscribes using it." />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rowRedeemReferral" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp">
+                <EditText android:id="@id/editReferralCode" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="Have a referral code?" android:maxLines="1" android:layout_weight="1.0" android:inputType="textCapCharacters" style="@style/FuturisticInput" />
+                <View android:layout_width="8.0dp" android:layout_height="0.0dp" />
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ff2d2d" android:id="@id/buttonRedeemReferral" android:background="?selectableItemBackground" android:padding="12.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="APPLY" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:textSize="16.0sp" android:textStyle="bold" android:textColor="#000000" android:id="@id/buttonSaveProfile" android:layout_width="match_parent" android:layout_height="60.0dp" android:layout_marginTop="32.0dp" android:layout_marginBottom="24.0dp" android:text="SYNC WITH CORE" app:backgroundTint="#ff2d2d" app:cornerRadius="16.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/mainCard" app:rippleColor="#ffffff" />
+        <ProgressBar android:id="@id/saveProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="10.0dp" app:layout_constraintBottom_toBottomOf="@id/buttonSaveProfile" app:layout_constraintEnd_toEndOf="@id/buttonSaveProfile" app:layout_constraintStart_toStartOf="@id/buttonSaveProfile" app:layout_constraintTop_toTopOf="@id/buttonSaveProfile" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

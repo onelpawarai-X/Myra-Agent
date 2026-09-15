@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background" android:padding="24.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Voice Authentication" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Secure MYRA using your unique voice signature." />
+    <View android:background="#33ffffff" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="24.0dp" android:layout_marginBottom="24.0dp" />
+    <com.google.android.material.switchmaterial.SwitchMaterial android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/switchVoiceAuth" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Enable Voice Authentication" />
+    <TextView android:textSize="14.0sp" android:textColor="@android:color/holo_red_light" android:id="@id/txtEnrollmentStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Voice Not Enrolled" />
+    <Button android:id="@id/btnEnrollVoice" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="Enroll Voice Profile" android:textAllCaps="false" android:backgroundTint="#d946ef" />
+    <Button android:textColor="@android:color/holo_red_light" android:id="@id/btnDeleteVoice" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="Delete Voice Profile" android:textAllCaps="false" style="@style/Widget.MaterialComponents.Button.TextButton" />
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/text_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:text="Security Threshold" />
+    <Spinner android:id="@id/spinnerThreshold" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginTop="4.0dp" android:backgroundTint="@android:color/white" />
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/text_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:text="Verification Mode" />
+    <Spinner android:id="@id/spinnerVerifyMode" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginTop="4.0dp" android:backgroundTint="@android:color/white" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@drawable/bg_solid" android:padding="16.0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/SubPageHeaderRow">
+            <TextView android:id="@id/backButton" style="@style/SubPageBackArrow" />
+            <TextView android:text="Voice &amp; AI Models" style="@style/SubPageTitle" />
+        </LinearLayout>
+        <LinearLayout style="@style/SubPageCard">
+            <TextView android:text="Assistant Voice" style="@style/SubPageLabel" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="Pick a voice and it will play a short sample automatically." />
+            <NumberPicker android:id="@id/ttsVoicePicker" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout style="@style/SubPageCard">
+            <TextView android:text="Assistant Name" style="@style/SubPageLabel" />
+            <EditText android:id="@id/editAssistantName" android:layout_marginBottom="0.0dp" android:hint="e.g. MYRA" android:inputType="textPersonName" style="@style/SubPageInput" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@id/buttonSaveVoiceAiSettings" android:background="@drawable/rounded_button" android:padding="14.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save" />
+    </LinearLayout>
+</ScrollView>

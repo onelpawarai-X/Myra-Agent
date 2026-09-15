@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/background" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:clipChildren="false" android:layout_width="match_parent" android:layout_height="220.0dp" android:layout_marginBottom="10.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentStart="true">
+                <TextView android:textSize="32.0sp" android:textStyle="bold" android:textColor="#ff2d2d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MYRA" android:letterSpacing="0.1" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Intelligent AI Assistant" />
+                <TextView android:textSize="26.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:text="Settings" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Customize your MYRA experience" />
+            </LinearLayout>
+            <ImageView android:layout_width="220.0dp" android:layout_height="match_parent" android:src="@drawable/ui" android:scaleType="centerCrop" android:contentDescription="MYRA" android:alpha="0.8" android:translationY="50.0dp" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:layout_width="match_parent" android:layout_height="10.0dp" />
+        <LinearLayout android:id="@id/menuVoiceAiModels" style="@style/SettingsMenuRow">
+            <TextView android:text="⚙️" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Voice &amp; AI Models" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Manage assistant voice and AI models" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuOrbCustomization" style="@style/SettingsMenuRow">
+            <TextView android:text="🎨" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Orb Customization" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Change assistant orb color and size" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuApiCloud" style="@style/SettingsMenuRow">
+            <TextView android:text="☁️" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="API &amp; Cloud Settings" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Configure all API keys and services" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuConnectors" style="@style/SettingsMenuRow">
+            <TextView android:text="🔌" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Connectors" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Connect MYRA with apps and AI services" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuPermissions" style="@style/SettingsMenuRow">
+            <TextView android:text="🛡️" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Permissions" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Manage all required permissions" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuVoiceAuth" style="@style/SettingsMenuRow">
+            <TextView android:text="🔒" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Voice Authentication" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Secure your assistant with your voice" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuWakeWord" style="@style/SettingsMenuRow">
+            <TextView android:text="🗣️" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Wake Word" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Customize how you start MYRA" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuNotificationIntelligence" style="@style/SettingsMenuRow">
+            <TextView android:text="✨" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Intelligence &amp; Modes" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Map permissions, smart reading, and automation modes" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuCallAssistant" style="@style/SettingsMenuRow">
+            <TextView android:text="📞" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Call Assistant" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Announce incoming calls and control them using your voice." style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/switchCallAssistant" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuChatNotifications" style="@style/SettingsMenuRow">
+            <TextView android:text="💬" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Chat Notifications" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Get notified about new chat messages." style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/switchChatNotifications" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuCustomName" android:visibility="gone" style="@style/SettingsMenuRow">
+            <TextView android:text="✨" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Custom Assistant Name" style="@style/SettingsMenuTitle" />
+                <TextView android:id="@id/textCustomNameValue" android:text="Not set - tap to choose a name" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuPcConnect" style="@style/SettingsMenuRow">
+            <TextView android:text="💻" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="PC Connect" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Connect and control from PC" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuLicense" style="@style/SettingsMenuRow">
+            <TextView android:text="🔑" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="License Activation" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Enter a license key bought from the website" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuSubscription" style="@style/SettingsMenuRow">
+            <TextView android:text="👑" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Subscription" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Manage plans and in-app payments" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuUserProfile" style="@style/SettingsMenuRow">
+            <TextView android:text="👤" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="User Profile" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Manage your profile and preferences" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuBatchUpdate" style="@style/SettingsMenuRow">
+            <TextView android:text="🔄" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Batch / Update" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Check updates and batch settings" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/menuAccount" android:layout_marginBottom="24.0dp" style="@style/SettingsMenuRow">
+            <TextView android:text="🚪" style="@style/SettingsMenuIcon" />
+            <LinearLayout style="@style/SettingsMenuTextGroup">
+                <TextView android:text="Account" style="@style/SettingsMenuTitle" />
+                <TextView android:text="Log out from your account" style="@style/SettingsMenuSubtitle" />
+            </LinearLayout>
+            <TextView style="@style/SettingsMenuChevron" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

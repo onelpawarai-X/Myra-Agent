@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/assistant_root_view" android:background="#99000000" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center|top" android:id="@id/clarification_recycler_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="80.0dp" android:layout_marginStart="16.0dp" android:layout_marginEnd="16.0dp" />
+    <TextView android:textSize="16.0sp" android:typeface="monospace" android:textColor="#e0e0e0" android:layout_gravity="center|bottom" android:id="@id/transcription_text" android:background="@drawable/glass_background" android:paddingTop="12.0dp" android:paddingBottom="12.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="180.0dp" android:text="Listening..." android:paddingStart="24.0dp" android:paddingEnd="24.0dp" />
+    <include android:layout_gravity="bottom" android:id="@id/input_box_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/overlay_input_box" />
+    <com.myra.voice.AudioWaveView android:layout_gravity="bottom" android:id="@id/audio_wave_view" android:visibility="visible" android:layout_width="match_parent" android:layout_height="150.0dp" />
+</FrameLayout>

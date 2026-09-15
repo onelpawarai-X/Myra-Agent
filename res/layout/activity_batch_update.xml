@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/background" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/SubPageHeaderRow">
+            <TextView android:id="@id/backButton" style="@style/SubPageBackArrow" />
+            <TextView android:text="Batch / Update" style="@style/SubPageTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="20.0dp" style="@style/SubPageCard">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Current Version" />
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/appVersionText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MYRA v2.4.1" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:id="@id/textUpdateSubtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="You are using the latest version" />
+            </LinearLayout>
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="#10b981" android:gravity="center" android:id="@id/updateStatusIcon" android:background="@drawable/settings_icon_circle_background" android:layout_width="48.0dp" android:layout_height="48.0dp" android:text="✓" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:orientation="vertical" android:id="@id/cardReleaseNotes" android:padding="16.0dp" android:visibility="gone" style="@style/SubPageCard">
+            <TextView android:text="WHAT'S NEW" style="@style/SubPageLabel" />
+            <TextView android:textSize="13.0sp" android:textColor="@android:color/white" android:id="@id/textReleaseNotes" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="" />
+        </LinearLayout>
+        <View android:id="@id/spacerReleaseNotes" android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/buttonInstallUpdate" android:background="@drawable/settings_icon_circle_background" android:padding="14.0dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:backgroundTint="#10b981">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/textInstallUpdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⬇️ Install Update" />
+        </LinearLayout>
+        <View android:id="@id/spacerInstallUpdate" android:visibility="gone" android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/buttonCheckUpdates" android:background="@drawable/settings_icon_circle_background" android:padding="14.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/textCheckUpdates" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔄 Check for Updates" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="24.0dp" />
+        <TextView android:text="Batch Settings" android:layout_marginStart="4.0dp" style="@style/SubPageLabel" />
+        <LinearLayout android:padding="16.0dp" style="@style/SubPageCard">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Auto Update" />
+                    <TextView android:textSize="11.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Download &amp; install updates automatically" />
+                </LinearLayout>
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/switchAutoUpdate" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Update over Wi-Fi Only" />
+                    <TextView android:textSize="11.0sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save mobile data" />
+                </LinearLayout>
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/switchWifiOnly" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="12.0dp" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/buttonClearCache" android:background="@drawable/settings_card_background" android:padding="14.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🗑️ Clear Cache" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

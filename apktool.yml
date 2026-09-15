@@ -1,0 +1,45 @@
+version: 3.0.3
+apkFileName: app-release.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 24
+  targetSdkVersion: 35
+versionInfo:
+  versionCode: 132
+  versionName: 2.1.35
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- mp4
+- png
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/tflite_langid.tflite
+- assets/mlkit-google-ocr-models/gocr/layout/line_clustering_custom_ops/model.tflite
+- assets/mlkit-google-ocr-models/gocr/layout/line_splitting_custom_ops/model.tflite
+- assets/mlkit-google-ocr-models/taser/detector/rpn_text_detector_mobile_space_to_depth_quantized_mbv2_v1.tflite
+- assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
+- assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
+- assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
+- assets/mlkit_odt_default_classifier/labeler_with_validation.tflite
+- assets/mlkit_odt_localizer/localizer_with_validation.tflite
+- res/raw/alexa.ppn
+- res/raw/americano.ppn
+- res/raw/blueberry.ppn
+- res/raw/bumblebee.ppn
+- res/raw/com_android_billingclient_heterodyne_info
+- res/raw/com_android_billingclient_registration_info.binarypb
+- res/raw/computer.ppn
+- res/raw/grapefruit.ppn
+- res/raw/grasshopper.ppn
+- res/raw/hey_google.ppn
+- res/raw/hey_siri.ppn
+- res/raw/jarvis.ppn
+- res/raw/ok_google.ppn
+- res/raw/picovoice.ppn
+- res/raw/porcupine.ppn
+- res/raw/porcupine_params.pv
+- res/raw/terminator.ppn
