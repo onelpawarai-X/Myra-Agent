@@ -8,3 +8,7 @@ local.properties
 *.iml
 .DS_Store
 Thumbs.db
+original/
+unknown/
+app-release.apk
+Myra-Agent-v2.apk

@@ -1426,6 +1426,38 @@
     .line 605
     move-result-object v3
 
+    const-string v7, "User-Agent"
+
+    const-string v8, "opencode/1.18.30"
+
+    invoke-virtual {v3, v7, v8}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
+
+    move-result-object v3
+
+    const-string v7, "x-opencode-session"
+
+    const-string v8, "myra-session-1"
+
+    invoke-virtual {v3, v7, v8}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
+
+    move-result-object v3
+
+    const-string v7, "x-opencode-request"
+
+    const-string v8, "myra-request-1"
+
+    invoke-virtual {v3, v7, v8}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
+
+    move-result-object v3
+
+    const-string v7, "x-opencode-client"
+
+    const-string v8, "myra-agent"
+
+    invoke-virtual {v3, v7, v8}, Lokhttp3/Request$Builder;->addHeader(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
+
+    move-result-object v3
+
     .line 606
     invoke-virtual {v3}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 

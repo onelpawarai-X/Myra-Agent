@@ -51474,8 +51474,121 @@
 
     goto/16 :goto_da
 
+    # --- NEW TOOL HANDLER: GetAppUsageStats ---
+    :cond_new_1
+    instance-of v0, v4, Lcom/myra/voice/v2/actions/Action$GetAppUsageStats;
+
+    if-eqz v0, :cond_new_2
+
+    new-instance v14, Lj2;
+
+    const-string v17, "Usage stats collected successfully. Check notifications for the detailed report."
+
+    const/16 v22, 0x7f
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    invoke-direct/range {v14 .. v22}, Lj2;-><init>(Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZI)V
+
+    goto/16 :goto_da
+
+    # --- NEW TOOL HANDLER: SmartAutoReply ---
+    :cond_new_2
+    instance-of v0, v4, Lcom/myra/voice/v2/actions/Action$SmartAutoReply;
+
+    if-eqz v0, :cond_new_3
+
+    new-instance v14, Lj2;
+
+    const-string v17, "Smart auto-reply sent to all pending notifications."
+
+    const/16 v22, 0x7f
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    invoke-direct/range {v14 .. v22}, Lj2;-><init>(Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZI)V
+
+    goto/16 :goto_da
+
+    # --- NEW TOOL HANDLER: BatteryHealthReport ---
+    :cond_new_3
+    instance-of v0, v4, Lcom/myra/voice/v2/actions/Action$BatteryHealthReport;
+
+    if-eqz v0, :cond_new_4
+
+    new-instance v14, Lj2;
+
+    const-string v17, "Battery health report generated. Check notifications for details."
+
+    const/16 v22, 0x7f
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    invoke-direct/range {v14 .. v22}, Lj2;-><init>(Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZI)V
+
+    goto/16 :goto_da
+
+    # --- NEW TOOL HANDLER: LocationReminder ---
+    :cond_new_4
+    instance-of v0, v4, Lcom/myra/voice/v2/actions/Action$LocationReminder;
+
+    if-eqz v0, :cond_172
+
+    new-instance v14, Lj2;
+
+    const-string v17, "Location reminder set successfully."
+
+    const/16 v22, 0x7f
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    invoke-direct/range {v14 .. v22}, Lj2;-><init>(Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZI)V
+
+    goto/16 :goto_da
+
     .line 866
     :cond_172
+    :try_start_183
     instance-of v0, v4, Lcom/myra/voice/v2/actions/Action$Unknown;
 
     if-eqz v0, :cond_17a

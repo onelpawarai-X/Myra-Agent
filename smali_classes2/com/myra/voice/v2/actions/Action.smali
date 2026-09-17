@@ -131,7 +131,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 109
+    .locals 113
 
     new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion;
 
@@ -4411,7 +4411,59 @@
 
     move-object/from16 v72, v5
 
-    filled-new-array/range {v9 .. v102}, [LZI0;
+    # --- NEW TOOL 95: get_app_usage_stats ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/4 v2, 0x0
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "get_app_usage_stats"
+    const-string v3, "Get app usage statistics: which apps were used most today, total screen time, and usage patterns."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v103
+
+    # --- NEW TOOL 96: smart_auto_reply ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/4 v2, 0x1
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "smart_auto_reply"
+    const-string v3, "Auto-reply to all pending message notifications with a smart response."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v104
+
+    # --- NEW TOOL 97: battery_health_report ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/4 v2, 0x2
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "battery_health_report"
+    const-string v3, "Detailed battery health report with optimization suggestions and health predictions."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v105
+
+    # --- NEW TOOL 98: location_reminder ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/4 v2, 0x3
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "location_reminder"
+    const-string v3, "Set a reminder that triggers when the user reaches a specific location."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v106
+
+    filled-new-array/range {v9 .. v106}, [LZI0;
 
     move-result-object v0
 
