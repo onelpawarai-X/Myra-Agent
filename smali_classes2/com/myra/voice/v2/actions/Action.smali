@@ -107,7 +107,13 @@
         Lcom/myra/voice/v2/actions/Action$Unknown;,
         Lcom/myra/voice/v2/actions/Action$Wait;,
         Lcom/myra/voice/v2/actions/Action$WaitForScreen;,
-        Lcom/myra/voice/v2/actions/Action$WriteFile;
+        Lcom/myra/voice/v2/actions/Action$WriteFile;,
+        Lcom/myra/voice/v2/actions/Action$ListProviders;,
+        Lcom/myra/voice/v2/actions/Action$ConnectProvider;,
+        Lcom/myra/voice/v2/actions/Action$SelectModel;,
+        Lcom/myra/voice/v2/actions/Action$GenerateVideo;,
+        Lcom/myra/voice/v2/actions/Action$GenerateAudio;,
+        Lcom/myra/voice/v2/actions/Action$ChatWithProvider;
     }
 .end annotation
 
@@ -131,7 +137,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 113
+    .locals 114
 
     new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion;
 
@@ -4463,7 +4469,85 @@
     invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
     move-result-object v106
 
-    filled-new-array/range {v9 .. v106}, [LZI0;
+    # --- NEW TOOL 99: list_providers ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/4 v2, 0x4
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "list_providers"
+    const-string v3, "List all available AI providers from models.dev with their connection status and icons."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v107
+
+    # --- NEW TOOL 100: connect_provider ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/4 v2, 0x5
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "connect_provider"
+    const-string v3, "Connect an AI provider by saving its API key. Supported providers: openai, anthropic, google, deepseek, x-ai, openrouter, opencode."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v108
+
+    # --- NEW TOOL 101: select_model ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/4 v2, 0x6
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "select_model"
+    const-string v3, "Select an AI model for use. Specify model name and optional provider. Use list_providers first to see available models."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v109
+
+    # --- NEW TOOL 102: generate_video ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/4 v2, 0x7
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "generate_video"
+    const-string v3, "Generate a video using AI video generation models. Specify prompt and model (e.g. runway, pika, kling)."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v110
+
+    # --- NEW TOOL 103: generate_audio ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/16 v2, 0x8
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "generate_audio"
+    const-string v3, "Generate speech audio from text using AI. Specify text and voice (alloy, echo, fable, onyx, nova, shimmer)."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v111
+
+    # --- NEW TOOL 104: chat_with_provider ---
+    new-instance v0, Lcom/myra/voice/v2/actions/Action$Companion$Spec;
+    new-instance v1, LN1;
+    const/16 v2, 0x9
+    invoke-direct {v1, v2}, LN1;-><init>(I)V
+    const-string v2, "chat_with_provider"
+    const-string v3, "Send a message to any connected AI provider and get a response. Specify provider, model, and message."
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    move-result-object v4
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/myra/voice/v2/actions/Action$Companion$Spec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lg40;)V
+    invoke-static {v0, v2}, Lbc1;->k(Ljava/lang/Object;Ljava/lang/String;)LZI0;
+    move-result-object v112
+
+    filled-new-array/range {v9 .. v112}, [LZI0;
 
     move-result-object v0
 
